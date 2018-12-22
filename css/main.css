@@ -11,7 +11,7 @@ ul {
     width: 100%;
 }
 
-li { float: left; }
+li { float: right; }
 
 li a {
     display: block;
