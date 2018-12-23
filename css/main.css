@@ -29,7 +29,6 @@ ul.posts li { list-style: none; }
 div.gallery {
     margin: 5px;
     border: 1px solid #ccc;
-    background-color: grey;
     width: 500px;
     float: left; }
 div.gallery:hover { border: 1px solid #777; }
