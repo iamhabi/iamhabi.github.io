@@ -23,6 +23,9 @@ nav li a {
 
 nav li a:hover:not(.active) { background-color: #111; }
 
+ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
+ul.posts li { list-style: none; }
+
 .active { background-color: #4CAF50; }
 .content { max-width: 500px; margin: auto; }
 .content-n { max-width: 1000px; margin: auto; }
