@@ -31,7 +31,12 @@ div.gallery {
     border: 1px solid #ccc;
     width: 500px;
     float: left; }
-div.gallery:hover { border: 1px solid #777; }
+
+div.detail {
+    margin: 10px;
+    border: 1px solid #ccc;
+    width: 500px;
+}
 
 .active { background-color: #4CAF50; }
 .content { max-width: 500px; margin: auto; }
@@ -48,5 +53,3 @@ div.gallery:hover { border: 1px solid #777; }
    color: white;
    text-align: center;
 }
-
-div.detail { margin: 10px; border: 1px solid #ccc; }
