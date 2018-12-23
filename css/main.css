@@ -49,9 +49,4 @@ div.gallery:hover { border: 1px solid #777; }
    text-align: center;
 }
 
-div.gallery { margin: 10px; border: 1px solid #ccc; }
-div.gallery:hover { border: 1px solid #777; }
-div.gallery img { width: 100%; height: auto; }
-        
 div.detail { margin: 10px; border: 1px solid #ccc; }
-div.detail img { width: 100%; height: auto; }
