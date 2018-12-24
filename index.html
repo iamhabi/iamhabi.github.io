@@ -1,0 +1,12 @@
+---
+layout: default
+title: iamhabi
+---
+
+<div class="content-m">
+    <div class="gallery">
+        {% for post in site.posts %}
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </div>
+</div>
