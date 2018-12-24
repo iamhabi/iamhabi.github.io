@@ -4,9 +4,9 @@ title: iamhabi
 ---
 
 <div class="content-m">
-    <div class="gallery">
         {% for post in site.posts %}
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+            <div class="gallery">
+                <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+            </div>
         {% endfor %}
-    </div>
 </div>
