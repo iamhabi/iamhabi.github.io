@@ -6,8 +6,8 @@ title: iamhabi
 <div class="content-m">
         {% for post in site.posts %}
             <div class="gallery">
-                <h1 style="text-align:center; text-decoration: none; text-decoration-line: none;">
-                    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                <h1 style="text-align:center;">
+                    <a href="{{ post.url }}" title="{{ post.title }}" style="text-decoration: none;">{{ post.title }}</a>
                 </h1>
             </div>
         {% endfor %}
