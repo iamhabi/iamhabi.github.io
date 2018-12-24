@@ -3,11 +3,9 @@ layout: default
 title: asdf
 ---
 
-<div class="post">
-    <h1 style="text-align: center;">{{ page.title }}</h1>
-    <p class="meta" style="text-align: right; font-size: 15px;">{{ page.date | date_to_string }}</p>
+<h1 style="text-align: center;">{{ page.title }}</h1>
+<p class="meta" style="text-align: right; font-size: 15px;">{{ page.date | date_to_string }}</p>
 
-    <p>
-        {{ content }}
-    </p>
-</div>
+<p>
+    {{ content }}
+</p>
