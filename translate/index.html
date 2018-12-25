@@ -1,0 +1,16 @@
+---
+layout: default
+title: Translate
+---
+
+<div class="content-m">
+        {% for post in site.posts %}
+            {% if post.category == "translate" %}
+            <div class="gallery">
+                <h1 style="text-align:center;">
+                    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                </h1>
+            </div>
+            {% endif %}
+        {% endfor %}
+</div>
