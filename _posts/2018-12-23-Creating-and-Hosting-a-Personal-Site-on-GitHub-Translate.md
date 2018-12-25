@@ -5,7 +5,7 @@ date: 2018-12-23
 category: translate
 ---
 
-> [원문](http://jmcglone.com/guides/github-pages/)
+> 번역 - <http://jmcglone.com/guides/github-pages/>
 
 > Jekyll을 사용하여 개인 사이트와 블로그를 만들고 GitHub를 사용해 무료로 배포하기 위한 초보자 가이드
 
