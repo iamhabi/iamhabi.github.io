@@ -23,6 +23,8 @@ nav li a {
 
 nav li a:hover:not(.active) { background-color: #111; }
 
+a { text-decoration: none; }
+
 .alink {
     text-decoration: none;
     display: block;
