@@ -5,9 +5,9 @@ date: 2018-12-23
 category: translate
 ---
 
+> [원문](http://jmcglone.com/guides/github-pages/)
 
 > Jekyll을 사용하여 개인 사이트와 블로그를 만들고 GitHub를 사용해 무료로 배포하기 위한 초보자 가이드
-
 
 이 가이드는 Git과 GitHub 초보자들이 [GitHub Pages](https://pages.github.com/)와 [Jekyll](https://jekyllrb.com/)를 시작할 수 있도록 돕기 위한 것입니다.
 여러분이 Git, GitHub와 버전 컨트롤에 대해 거의 알지 한다고 가정합니다.
