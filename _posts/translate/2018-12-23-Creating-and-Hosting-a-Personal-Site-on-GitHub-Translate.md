@@ -2,6 +2,7 @@
 layout: post
 title: "GitHub로 개인 사이트를 만들고 배포하기"
 date: 2018-12-23
+category: translate
 ---
 
 
