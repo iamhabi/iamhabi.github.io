@@ -5,12 +5,12 @@ title: iamhabi
 
 <div class="content-m">
         {% for post in site.posts %}
-            <a href="{{ post.url }}" title="{{ post.title }}">
-                <div class="gallery">
-                    <h1 style="text-align:center;">
-                        {{ post.title }}
-                    </h1>
-                </div>
-            </a>
+        <a href="{{ post.url }}" title="{{ post.title }}">
+            <div class="gallery">
+                <h1 style="text-align:center;">
+                    {{ post.title }}
+                </h1>
+            </div>
+        </a>
         {% endfor %}
 </div>
