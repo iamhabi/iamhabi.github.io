@@ -23,6 +23,10 @@ nav li a {
 
 nav li a:hover:not(.active) { background-color: #111; }
 
+a {
+    text-decoration: none;
+}
+
 ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
 ul.posts li { list-style: none; }
 
@@ -49,5 +53,5 @@ div.gallery {
 }
 
 .about {
-    
+    text-align: center;
 }
