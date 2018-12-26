@@ -61,6 +61,161 @@ GitHub에는 정말 멋지고 재미있는 저장소들이 정말 많으며, 매
 
 ## GitHub Pages
 
-GitHub Pages는 GitHub를 통해 무료로 호스팅된는 공개 웹 페이지입니다. GitHub 유저들은 개인 웹사이트(유저 당 한 사이트)와 특정 GitHub 프로젝트에 대한 사이트를 만들고 호스팅을 할 수 있습니다. Pages는 GitHub와 동일한 방식으로 작업을 할 수 있도록 해주고, 저장소의 이름이 특정 방식으로 지정되어 있고 파일이 HTML이나 마크다운이라면 파일을 웹사이트 형식으로 볼 수 있습니다. GitHub Pages는 GitHub의 *자각 버전입니다. Pages는 또한 우리가 배울 [Jekyll](https://jekyllrb.com/)이라고 부르는 강력한 [사이트 생성기](https://www.staticgen.com/) 포함합니다.
+GitHub Pages는 GitHub를 통해 무료로 호스팅되는 공개 웹 페이지입니다. GitHub 유저들은 개인 웹사이트(유저 당 한 사이트)와 특정 GitHub 프로젝트에 대한 사이트를 만들고 호스팅을 할 수 있습니다. Pages는 GitHub와 동일한 방식으로 작업을 할 수 있도록 해주며, 저장소의 이름이 특정 방식으로 지정되어 있고 파일이 HTML이나 마크다운이라면 파일을 웹사이트 형식으로 볼 수 있습니다. GitHub Pages는 GitHub의 *자각 버전입니다. Pages는 또한 우리가 배울 [Jekyll](https://jekyllrb.com/)이라고 부르는 강력한 [사이트 생성기](https://www.staticgen.com/) 포함합니다.
 
 # GitHub Pages 시작하기
+
+만약 이런 개념의 일부가 아직 이해되지 않아도 걱정하지 마세요. 이것을 배우는 가장 좋은 방법은 작업을 시작하는 것이므로 더 이상 시간을 낭비하지 말고 시작해봅시다.
+
+1. 저장소를 생성합시다. GitHub에 로그인을 하고 <https://github.com/new>에 들어가거나 New Repository 아이콘을 클릭하세요.
+
+![](http://jmcglone.com/img/guides/01-create-repo.png)
+
+2. 저장소 이름을 `username.github.io`로 설정하세요. `username`은 여러분의 GitHub 닉네임을 쓰세요. Public이 체크되어있는지 확인하고 저장소 생성 시 README도 생성해주세요. 
+
+![](http://jmcglone.com/img/guides/02-name-repo.png)
+
+3. 저장소 이름 옆에 있는 플러스 아이콘을 눌러 `index.html`파일을 생성하세요.
+
+![](http://jmcglone.com/img/guides/03-01-create-index-page.png)
+![](http://jmcglone.com/img/guides/03-02-create-index-page.png)
+
+*GitHub 에디터에 다음 markup을 작성해주세요.
+
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hank Quinlan, Horrible Cop</title>
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/cv">CV</a></li>
+        		<li><a href="/blog">Blog</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        		<h1>Hi there, I'm Hank Quinlan!</h1>
+				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
+        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
+```
+
+4. `index.html`을 커밋합시다. 페이지의 하단에 변경에 대한 설명을 작성하기 위한 입력창과 파일을 커밋하기 위한 버튼이 있습니다.
+
+![](http://jmcglone.com/img/guides/04-01-commit-index-page.png)
+
+축하합니다! 여러분은 방금 막 여러분의 첫 GitHub 사이트를 만들었습니다. <https://username.github.io>에서 확인해보세요. 보통 사이트가 생성되기까지 5~10분 정도 걸리므로 그 동안 HTML을 꾸며봅시다.
+
+5. To style the content go back to your repository home and create a new file named css/main.css. The css/ before the filename will automatically create a subdirectory called css. Pretty neat.
+
+꾸미지기 위해 저장소로 돌아가서 `css/main.css`로 불리는 파일을 생성해봅시다. 파일 이름 전에 붙이는 `css/`는 자동으로 `css`라는 하위 디렉토리를 생성합니다. 꽤 깔끔하죠.
+
+![](http://jmcglone.com/img/guides/05-01-create-css-file.png)
+
+다음 코드를 `main.css`에 입력해주세요.
+
+```
+body {
+    margin: 60px auto;
+    width: 70%;
+}
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+```
+
+새로 만든 CSS 파일을 꼭 커밋하세요!
+
+![](http://jmcglone.com/img/guides/06-commit-css-file.png)
+
+6. HTML 문서의 `<head>`부분에 CSS 파일을 Link해줍시다. `index.html` 파일로 돌아가서 "Edit" 버튼을 눌러주세요.
+
+![](http://jmcglone.com/img/guides/07-01-edit-index-page.png)
+
+`main.css` 파일을 추가하세요.(추가된 내용은 굵게 표시됩니다.):
+
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hank Quinlan, Horrible Cop</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/cv">CV</a></li>
+        		<li><a href="/blog">Blog</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        		<h1>Hi there, I'm Hank Quinlan!</h1>
+				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
+        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
+```
+
+<https://username.github.io>를 방문해 여러분이 꾸민 사이트를 확인해보세요. <https://hankquinlan.github.io>랑 똑같이 보여야 합니다.
+
+# GitHub Pages에 Jekyll 사용하기
