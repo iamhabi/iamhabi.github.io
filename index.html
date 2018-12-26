@@ -10,7 +10,7 @@ title: iamhabi
                 <h1 style="text-align:center;">
                     {{ post.title }}
                 </h1>
-                {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+                {{ post.excerpt | remove: '<h1>' | remove: '</h1>' }}
             </div>
         </a>
         {% endfor %}
