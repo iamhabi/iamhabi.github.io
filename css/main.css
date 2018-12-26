@@ -45,7 +45,7 @@ div.gallery {
 div.gallery:hover { background-color: beige; }
 
 .active { background-color: #4CAF50; }
-.content { max-width: 500px; margin: auto; }
+.content { max-width: 600px; margin: auto; }
 .content-m { max-width: 700px; margin: auto; }
 .content-n { max-width: 1000px; margin: auto; }
 
