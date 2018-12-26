@@ -131,3 +131,7 @@ Jekyll은 매우 강력한 사이트 동적 생성기입니다. *어떤 면에�
 Jekyll은 템플릿에 의존하기 때문에 여러분의 웹사이트를 더 쉽게 관리합니다. 사이트 정적 생성기를 사용할 때 템플릿(또는 Jekyll 명명법)은 여러분의의 가장 친한 친구입니다. *navigation item의 위치를 추가, 삭제 또는 변경하면 모든 페이지에서 navigatnoin markup을 변경해야 하는 대신에 Jekyll이 모든 페이지에서 사용되는 레이아웃을 만들 수 있습니다. 이 튜토리얼에서 우리는 여러분의 웹사이트 구축을 도와줄 두 개의 Jekyll 템플릿을 생성할겁니다.
 
 ## github.com에서 Jekyll 세팅하기
+
+여러분의 사이트에서 Jekyll을 사용하기 위해 [Jekyll의 파일 구조](http://jekyllrb.com/docs/structure/)를 따라야합니다. 이 구조에 대해 배우기 위해 우리는 우리의 GitHub 저장소에 구축할겁니다.
+
+7. Create a .gitignore file. This file tells Git to ignore the _site directory that Jekyll automatically generates each time you commit. Because this directory and all the files inside are written each time you commit, you do not want this directory under version control.
