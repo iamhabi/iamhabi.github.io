@@ -20,15 +20,15 @@ category: translate
 
 # 여러분이 알아야 할 것들
 
-*GitHub 페이지를 더 많은 사용자들이 이용할 수 있도록 하기 위해, 이 가이드는 github.com의 웹 인터페이스를 사용하여 여러분의 사이트를 만드는 것에 초점을 두고 있습니다. 따라서 Git과 GitHub에 관련된 표준 도구를 일반화합니다.
+*GitHub Pages를 더 많은 사용자들이 이용할 수 있도록 하기 위해, 이 가이드는 github.com의 웹 인터페이스를 사용하여 여러분의 사이트를 만드는 것에 초점을 두고 있습니다. 따라서 Git과 GitHub에 관련된 표준 도구를 일반화합니다.
 
 *Git과 GitHub에 관련된 익숙해지기 위해(예를 들어 명령어나 터미널같은), 여러분이 알고 있어야 할 다른 훌륭한 가이드들이 있습니다. 북마크를 하고 이 가이드를 완전히 읽은 후 읽어보거나 이미 알고 있다면 건너뛰셔도 좋습니다: [Anna Debenham](https://24ways.org/2013/get-started-with-github-pages/), [Thinkful](http://www.thinkful.com/learn/a-guide-to-using-github-pages/), 그리고 [GitHub](https://pages.github.com/)는 GitHub 호스팅이나 Jekyll의 명령어나 로컬 워크플로
 
-또 [이 문서의 끝]()에서는 Git, GitHub 페이지, Jekyll과 마크다운에 여러분이 더욱 익숙해질 수 있도록 도와 줄 수 있는 매우 좋은 사이트들을 모아놨습니다. 좋은 가이드를 새로 찾는대로 리스트를 업데이트하겠습니다.
+또 [이 문서의 끝]()에서는 Git, GitHub Pages, Jekyll과 마크다운에 여러분이 더욱 익숙해질 수 있도록 도와 줄 수 있는 매우 좋은 사이트들을 모아놨습니다. 좋은 가이드를 새로 찾는대로 리스트를 업데이트하겠습니다.
 
-# Git, GitHub 그리고 GitHub 페이지가 뭔가요?
+# Git, GitHub 그리고 GitHub Pages가 뭔가요?
 
-Git, GitHub, 그리고 GitHub 페이지는 모두 밀접하게 관련되어있습니다. Git은 작업을 하기 위한 것이고 GitHub와 GitHub 페이지는 여러분이 완료한 작업을 저장하는 곳이라고 생각하세요. Git을 사용한 프로젝트는 GitHub나 GitHub 페이지에 공개적으로 저장되므로 일반적으로 Git은 여러분의 로컬 컴퓨터에서 하는 작업이며, GitHub는 모든 작업을 서버에 공개적으로 저장하는 곳입니다.
+Git, GitHub, 그리고 GitHub Pages는 모두 밀접하게 관련되어있습니다. Git은 작업을 하기 위한 것이고 GitHub와 GitHub Pages는 여러분이 완료한 작업을 저장하는 곳이라고 생각하세요. Git을 사용한 프로젝트는 GitHub나 GitHub Pages에 공개적으로 저장되므로 일반적으로 Git은 여러분의 로컬 컴퓨터에서 하는 작업이며, GitHub는 모든 작업을 서버에 공개적으로 저장하는 곳입니다.
 
 ## Git
 
@@ -50,14 +50,17 @@ GitHub는 Git을 사용한 소프트웨어나 웹 프로젝트(또는 다른 tex
 
 GitHub에는 정말 멋지고 재미있는 저장소들이 정말 많으며, 매일 새로운 저장소가 추가됩니다. GitHub에서 코드를 사용할 수 있도록 해주는 인기있는 소프트웨어 개발 프로젝트들은 다음과 같습니다: 
 
-* [트위터 부트스트랩](https://github.com/twbs/bootstrap)은 Twitter 개발진들이 만든 첫 모바일 웹사이트를 위한 매우 유명한 프론트-엔드 프레임워크
-* [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)은 빠르게 웹사이트를 구축하기 위한 프론트-엔드 템플릿
+* [트위터 부트스트랩](https://github.com/twbs/bootstrap), Twitter 개발진들이 만든 첫 모바일 웹사이트를 위한 매우 유명한 프론트-엔드 프레임워크
+* [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate), 빠르게 웹사이트를 구축하기 위한 프론트-엔드 템플릿
 * 자바스크립트 시각화 라이브러리 [D3](https://github.com/mbostock/d3)
 * [Ruby on Rails](), Ruby로 구축한 오픈 소스 웹 프레임워크
 
-흔히, 사람들은 그들의 코드를 작성한 파일을 호스팅하기 때문에, Ruby on Rails 프로젝트를 예시로 보듯, 실제로 작성한 코드를 볼 수 있습니다.
+흔히 사람들은 그들의 코드를 작성한 파일을 호스팅하기 때문에, Ruby on Rails 프로젝트를 예시로 보듯, 실제로 작성한 코드를 볼 수 있습니다.
 
 ![](http://jmcglone.com/img/guides/github-ruby-on-rails.png)
 
-## GitHub 페이지
+## GitHub Pages
 
+GitHub Pages는 GitHub를 통해 무료로 호스팅된는 공개 웹 페이지입니다. GitHub 유저들은 개인 웹사이트(유저 당 한 사이트)와 특정 GitHub 프로젝트에 대한 사이트를 만들고 호스팅을 할 수 있습니다. Pages는 GitHub와 동일한 방식으로 작업을 할 수 있도록 해주고, 저장소의 이름이 특정 방식으로 지정되어 있고 파일이 HTML이나 마크다운이라면 파일을 웹사이트 형식으로 볼 수 있습니다. GitHub Pages는 GitHub의 *자각 버전입니다. Pages는 또한 우리가 배울 [Jekyll](https://jekyllrb.com/)이라고 부르는 강력한 [사이트 생성기](https://www.staticgen.com/) 포함합니다.
+
+# GitHub Pages 시작하기
