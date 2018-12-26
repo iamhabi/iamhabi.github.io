@@ -42,12 +42,17 @@ ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
 ul.posts li { list-style: none; }
 
 div.gallery {
-    margin: 15px;
+    margin: 25px;
     border: 1px solid #ccc;
     width: 700px;
 }
 
-div.gallery p { max-width: 400px; text-align: center; margin: auto; }
+div.gallery p {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 7px;
+}
 
 div.gallery:hover { background-color: beige; }
 
