@@ -26,7 +26,7 @@ category: translate
 
 또 [이 문서의 끝]()에서는 Git, GitHub Pages, Jekyll과 마크다운에 여러분이 더욱 익숙해질 수 있도록 도와 줄 수 있는 매우 좋은 사이트들을 모아놨습니다. 좋은 가이드를 새로 찾는대로 리스트를 업데이트하겠습니다.
 
-# Git, GitHub 그리고 GitHub Pages가 뭔가요?
+# Git, GitHub 그리고 GitHub Pages가 무엇인가요?
 
 Git, GitHub, 그리고 GitHub Pages는 모두 밀접하게 관련되어있습니다. Git은 작업을 하기 위한 것이고 GitHub와 GitHub Pages는 여러분이 완료한 작업을 저장하는 곳이라고 생각하세요. Git을 사용한 프로젝트는 GitHub나 GitHub Pages에 공개적으로 저장되므로 일반적으로 Git은 여러분의 로컬 컴퓨터에서 하는 작업이며, GitHub는 모든 작업을 서버에 공개적으로 저장하는 곳입니다.
 
@@ -61,7 +61,7 @@ GitHub에는 정말 멋지고 재미있는 저장소들이 정말 많으며, 매
 
 ## GitHub Pages
 
-GitHub Pages는 GitHub를 통해 무료로 호스팅되는 공개 웹 페이지입니다. GitHub 유저들은 개인 웹사이트(유저 당 한 사이트)와 특정 GitHub 프로젝트에 대한 사이트를 만들고 호스팅을 할 수 있습니다. Pages는 GitHub와 동일한 방식으로 작업을 할 수 있도록 해주며, 저장소의 이름이 특정 방식으로 지정되어 있고 파일이 HTML이나 마크다운이라면 파일을 웹사이트 형식으로 볼 수 있습니다. GitHub Pages는 GitHub의 *자각 버전입니다. Pages는 또한 우리가 배울 [Jekyll](https://jekyllrb.com/)이라고 부르는 강력한 [사이트 생성기](https://www.staticgen.com/) 포함합니다.
+GitHub Pages는 GitHub를 통해 무료로 호스팅되는 공개 웹 페이지입니다. GitHub 유저들은 개인 웹사이트(유저 당 한 사이트)와 특정 GitHub 프로젝트에 대한 사이트를 만들고 호스팅을 할 수 있습니다. Pages는 GitHub와 동일한 방식으로 작업을 할 수 있도록 해주며, 저장소의 이름이 특정 방식으로 지정되어 있고 파일이 HTML이나 마크다운이라면 파일을 웹사이트 형식으로 볼 수 있습니다. GitHub Pages는 GitHub의 self-aware 버전입니다. Pages는 또한 우리가 배울 [Jekyll](https://jekyllrb.com/)이라고 부르는 강력한 [사이트 생성기](https://www.staticgen.com/) 포함합니다.
 
 # GitHub Pages 시작하기
 
@@ -110,7 +110,7 @@ some code
 
 ![](http://jmcglone.com/img/guides/07-01-edit-index-page.png)
 
-`main.css` 파일을 추가하세요.(추가된 내용은 굵게 표시됩니다.):
+`main.css` 파일을 추가하세요.(추가된 내용은 굵게 표시됩니다):
 
 ```
 some code
@@ -119,3 +119,15 @@ some code
 <https://username.github.io>를 방문해 여러분이 꾸민 사이트를 확인해보세요. <https://hankquinlan.github.io>랑 똑같이 보여야 합니다.
 
 # GitHub Pages에 Jekyll 사용하기
+
+GitHub Pages, Jekyll같은 것은 self-aware이므로 만약 특정 규칙에 따라 지어진 이름의 폴더나 파일을 추가하고, GitHub에 커밋한다면, Jekyll이 마법같이 여러분의 사이트를 구축할겁니다.
+
+여러분의 컴퓨터에 Jekyll을 설정하여 사이트를 편집하고 바로 확인 할 수 있도록 하고 준비가 되면 GitHub 저장소에 변경 사항을 push하는 것이 좋지만, 우리는 그렇게 하지 않을 겁니다. 대신에 Jekyll이 어떻게 작동하는지 알아보기 위해 GitHub 웹 인터페이스를 사용한 우리의 GitHub 저장소에 Jekyll을 구축해볼겁니다.
+
+## Jekyll이 무엇인가요?
+
+Jekyll은 매우 강력한 사이트 동적 생성기입니다. *어떤 면에서, 이것은 사이트에 콘텐츠를 저장하기 위해 데이터베이스를 사용하기 전에 정적 HTML 시대로 돌아가는 겁니다. 개인 사이트같이 복잡한 구조가 없는 간단한 사이트에게 이것은 커다란 장점입니다. GitHub와 함께 사용할 때, 파일을 커밋할 때 마다 Jekyll은 자동적으로 여러분의 사이트를 위해 HTML 페이지를 재구축할겁니다.
+
+Jekyll은 템플릿에 의존하기 때문에 여러분의 웹사이트를 더 쉽게 관리합니다. 사이트 정적 생성기를 사용할 때 템플릿(또는 Jekyll 명명법)은 여러분의의 가장 친한 친구입니다. *navigation item의 위치를 추가, 삭제 또는 변경하면 모든 페이지에서 navigatnoin markup을 변경해야 하는 대신에 Jekyll이 모든 페이지에서 사용되는 레이아웃을 만들 수 있습니다. 이 튜토리얼에서 우리는 여러분의 웹사이트 구축을 도와줄 두 개의 Jekyll 템플릿을 생성할겁니다.
+
+## github.com에서 Jekyll 세팅하기
