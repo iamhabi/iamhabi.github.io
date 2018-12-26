@@ -83,34 +83,7 @@ GitHub Pages는 GitHub를 통해 무료로 호스팅되는 공개 웹 페이지�
 *GitHub 에디터에 다음 markup을 작성해주세요.
 
 ```
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+some code
 ```
 
 4. `index.html`을 커밋합시다. 페이지의 하단에 변경에 대한 설명을 작성하기 위한 입력창과 파일을 커밋하기 위한 버튼이 있습니다.
@@ -119,58 +92,14 @@ GitHub Pages는 GitHub를 통해 무료로 호스팅되는 공개 웹 페이지�
 
 축하합니다! 여러분은 방금 막 여러분의 첫 GitHub 사이트를 만들었습니다. <https://username.github.io>에서 확인해보세요. 보통 사이트가 생성되기까지 5~10분 정도 걸리므로 그 동안 HTML을 꾸며봅시다.
 
-5. To style the content go back to your repository home and create a new file named css/main.css. The css/ before the filename will automatically create a subdirectory called css. Pretty neat.
-
-꾸미지기 위해 저장소로 돌아가서 `css/main.css`로 불리는 파일을 생성해봅시다. 파일 이름 전에 붙이는 `css/`는 자동으로 `css`라는 하위 디렉토리를 생성합니다. 꽤 깔끔하죠.
+5. 꾸미기 위해 저장소로 돌아가서 `css/main.css`로 불리는 파일을 생성해봅시다. 파일 이름 전에 붙이는 `css/`는 자동으로 `css`라는 하위 디렉토리를 생성합니다. 꽤 깔끔하죠.
 
 ![](http://jmcglone.com/img/guides/05-01-create-css-file.png)
 
 다음 코드를 `main.css`에 입력해주세요.
 
 ```
-body {
-    margin: 60px auto;
-    width: 70%;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
+some code
 ```
 
 새로 만든 CSS 파일을 꼭 커밋하세요!
@@ -184,36 +113,7 @@ ul.posts li {
 `main.css` 파일을 추가하세요.(추가된 내용은 굵게 표시됩니다.):
 
 ```
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+some code
 ```
 
 <https://username.github.io>를 방문해 여러분이 꾸민 사이트를 확인해보세요. <https://hankquinlan.github.io>랑 똑같이 보여야 합니다.
