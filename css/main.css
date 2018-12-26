@@ -47,7 +47,7 @@ div.gallery {
     width: 700px;
 }
 
-div.gallery.p { max-width: 400px; text-align: center; }
+div.gallery p { max-width: 400px; text-align: center; }
 
 div.gallery:hover { background-color: beige; }
 
