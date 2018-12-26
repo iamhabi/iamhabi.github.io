@@ -6,7 +6,7 @@ category: project
 exceprt_separator: Morse Code Translator
 ---
 
-# Morse Code Translator
+# Morse Code Translator - java
 
 ## Compiler
   gcc  
