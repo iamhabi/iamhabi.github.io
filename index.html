@@ -7,10 +7,10 @@ title: iamhabi
         {% for post in site.posts %}
         <a href="{{ post.url }}" title="{{ post.title }}" class="alink">
             <div class="gallery">
-                <h1 style="margin-top: 20px; margin-left: 40px;">
+                <h1 style="text-align: center;">
                     {{ post.title }}
                 </h1>
-                <p style="text-align: center;">{{ post.excerpt | strip_html }}</p>
+                <p style="text-align: center; max-width: 400px;">{{ post.excerpt | strip_html }}</p>
             </div>
         </a>
         {% endfor %}
