@@ -23,12 +23,7 @@ nav li a {
 
 nav li a:hover:not(.active) { background-color: #111; }
 
-img {
-    max-width: 600px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
+img { max-width: 600px; }
 
 a { color: blue }
 
