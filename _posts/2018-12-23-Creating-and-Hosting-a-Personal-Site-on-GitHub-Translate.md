@@ -19,11 +19,8 @@ category: translate
 제가 GitHub와 GitHub Pages를 저의 개인 사이트(와 다른 프로젝트들)에 사용한 이유가 궁금하시면 [이 곳](http://jmcglone.com/notes/2014/05/03/using-github-to-create-and-host-a-personal-website)을 참조해주세요.
 
 # 여러분이 알아야 할 것들
-In order to make GitHub Pages accessible to a wider audience, this guide focuses on using the web interface on github.com to build your personal website, thereby generalizing and glossing over the standard tools associated with Git and GitHub.
 
 *GitHub 페이지를 더 많은 사용자들이 이용할 수 있도록 하기 위해, 이 가이드는 github.com의 웹 인터페이스를 사용하여 여러분의 사이트를 만드는 것에 초점을 두고 있습니다. 따라서 Git과 GitHub에 관련된 표준 도구를 일반화합니다.
-
-Anna Debenham, Thinkful, and even GitHub itself go above and beyond making the command line or local workflow of GitHub hosting and Jekyll templates accessible to a wider audience.
 
 *Git과 GitHub에 관련된 익숙해지기 위해(예를 들어 명령어나 터미널같은), 여러분이 알고 있어야 할 다른 훌륭한 가이드들이 있습니다. 북마크를 하고 이 가이드를 완전히 읽은 후 읽어보거나 이미 알고 있다면 건너뛰셔도 좋습니다: [Anna Debenham](https://24ways.org/2013/get-started-with-github-pages/), [Thinkful](http://www.thinkful.com/learn/a-guide-to-using-github-pages/), 그리고 [GitHub](https://pages.github.com/)는 GitHub 호스팅이나 Jekyll의 명령어나 로컬 워크플로
 
@@ -43,9 +40,24 @@ Git은 효율적인 방식으로 파일을 여러 버전으로 유지하고 다�
 
 ![](http://jmcglone.com/img/guides/git-basics.png)
 
-*Git의 흐름은 다중방향입니다. 각 변경 사항의 중요 부분은 버전에서 중요하다고 표시되고, 계속 진행됩니다. 만약 전 단계로 돌아가야 한다면 여러분은 현재 데이터의 손실없이 돌아갈 수 있습니다. 구글 문서의 "revision history"나 위키피디아의 "edit history"가 이런 방식으로 작동합니다. Git은 훨씬 자세하고 더 복잡해질 수 있습니다.
+*Git의 흐름은 다중 방향입니다. 각 변경 사항의 중요 부분은 버전에서 중요하다고 표시되고, 계속 진행됩니다. 만약 전 단계로 돌아가야 한다면 여러분은 현재 데이터의 손실없이 돌아갈 수 있습니다. 구글 문서의 "revision history"나 위키피디아의 "edit history"가 이런 방식으로 작동합니다. Git은 훨씬 자세하고 더 복잡해질 수 있습니다.
 
-만약 기회가 생기면 [15분, Git에 대한 웹 자습서](http://try.github.io/)를 **강력히 추천**합니다.
+만약 기회가 생기면 [Git에 대한 15분 웹 자습서](http://try.github.io/)를 **강력히 추천**합니다.
 
 ## GitHub
+
+GitHub는 Git을 사용한 소프트웨어나 웹 프로젝트(또는 다른 text 기반 프로젝트)를 위한 웹 호스팅 서비스입니다. 많은 경우, 대부분의 코드는 공개적으로 이용가능하고, 개발자들이 코드를 쉽게 조사, 협업, 다운로드, 개선, 혼합, 사용등을 가능하게 합니다. 각 프로젝트의 코드가 저장되는 곳을 저장소라고 부릅니다.
+
+GitHub에는 정말 멋지고 재미있는 저장소들이 정말 많으며, 매일 새로운 저장소가 추가됩니다. GitHub에서 코드를 사용할 수 있도록 해주는 인기있는 소프트웨어 개발 프로젝트들은 다음과 같습니다: 
+
+* [트위터 부트스트랩](https://github.com/twbs/bootstrap)은 Twitter 개발진들이 만든 첫 모바일 웹사이트를 위한 매우 유명한 프론트-엔드 프레임워크
+* [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)은 빠르게 웹사이트를 구축하기 위한 프론트-엔드 템플릿
+* 자바스크립트 시각화 라이브러리 [D3](https://github.com/mbostock/d3)
+* [Ruby on Rails](), Ruby로 구축한 오픈 소스 웹 프레임워크
+
+흔히, 사람들은 그들의 코드를 작성한 파일을 호스팅하기 때문에, Ruby on Rails 프로젝트를 예시로 보듯, 실제로 작성한 코드를 볼 수 있습니다.
+
+![](http://jmcglone.com/img/guides/github-ruby-on-rails.png)
+
+## GitHub 페이지
 
