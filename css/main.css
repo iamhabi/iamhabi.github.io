@@ -42,7 +42,7 @@ ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
 ul.posts li { list-style: none; }
 
 div.gallery {
-    margin: 5px;
+    margin: 15px;
     border: 1px solid #ccc;
     width: 700px;
 }
