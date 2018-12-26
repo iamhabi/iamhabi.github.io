@@ -27,6 +27,11 @@ img { max-width: 600px; }
 
 a { color: blue }
 
+code {
+    background-color: beige;
+    max-width: 600px;
+}
+
 .alink {
     text-decoration: none;
     display: block;
