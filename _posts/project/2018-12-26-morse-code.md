@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Morse Code
+title: Morse Code Translater
 data: 2018-12-26
 category: project
-exceprt_separator: Morse Code Translator
 ---
 
-# Morse Code Translator - java
+# Morse Code Translater
 
 ## Compiler
   gcc  
