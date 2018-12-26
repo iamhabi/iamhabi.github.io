@@ -8,9 +8,10 @@ title: Project
             {% if post.category == "project" %}
             <a href="{{ post.url }}" title="{{ post.title }}" class="alink">
                 <div class="gallery">
-                    <h1 style="text-align:center;">
+                    <h1 style="text-align:center; margin-top: 10px;">
                         {{ post.title }}
                     </h1>
+                    <p>{{ post.excerpt | strip_html }}</p>
                 </div>
             </a>
             {% endif %}
