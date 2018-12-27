@@ -131,4 +131,12 @@ Jekyll은 템플릿에 의존하기 때문에 여러분의 웹사이트를 더 �
 
 여러분의 사이트에서 Jekyll을 사용하기 위해 [Jekyll의 파일 구조](http://jekyllrb.com/docs/structure/)를 따라야합니다. 이 구조에 대해 배우기 위해 우리의 GitHub 저장소에 구축할겁니다.
 
-7. Create a .gitignore file. This file tells Git to ignore the _site directory that Jekyll automatically generates each time you commit. Because this directory and all the files inside are written each time you commit, you do not want this directory under version control.
+7. `.gitignore` 파일을 생성해주세요. 이 파일은 여러분이 커밋할때마다 Jekyll이 자동으로 생성하는 `_site` 파일을 무시하도록 Git에게 말해줍니다. 이 디렉토리와 안에 있는 모든 파일은 여러분이 커밋할때마다 쓰여지므로, 이 디렉토리가 버전 관리 되는 것을 원하지 않습니다.
+
+![](http://jmcglone.com/img/guides/08-01-create-gitignore.png)
+
+`.gitignore` 파일에 다음 코드를 추가해주세요
+
+```
+_site/
+```
