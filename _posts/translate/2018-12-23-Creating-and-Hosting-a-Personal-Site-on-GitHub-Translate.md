@@ -3,11 +3,9 @@ layout: post
 title: "GitHub로 개인 사이트를 만들고 배포하기"
 date: 2018-12-23
 category: translate
-excerpt_separator: <!--more-->
 ---
 
 > Jekyll을 사용하여 개인 사이트와 블로그를 만들고 GitHub를 사용해 무료로 배포하기 위한 초보자 가이드
-<!--more-->
 
 > 번역 - <http://jmcglone.com/guides/github-pages/>
 
@@ -140,3 +138,139 @@ Jekyll은 템플릿에 의존하기 때문에 여러분의 웹사이트를 더 �
 ```
 _site/
 ```
+
+8. Jekyll에게 여려번의 프로젝트에 대한 몇가지 기본사항을 알려주는 `_config.yml` 파일을 만들어봅시다. 이 예제에서 우리는 Jekyll에게 우리 사이트의 이름과 우리가 사용할 마크다운의 버전을 알려줍니다.
+
+```
+name: Hank Quinian, Horrible Cop
+markdown: kramdown
+```
+
+*이 부분에서 여러분이 GitHub 웹 인터페이스를 사용하여 파일을 생성하였다고 믿고, 위 예시에 관한 스크린샷을 첨부하지 않겠습니다*
+
+9. `_layouts` 디렉토리를 생성하고, 디렉토리 안에 `default.html`이라는 이름의 파일을 생성해주세요. (새로운 파일을 생성하면서 디렉토리도 생성할 수 있습니다. 만약 잊어버렸다면 [`main.css` 단계]()를 다시 한번 봐주세요.)
+
+이 파일은 `<head>`와 `<footer>`같은 반복되는 요소들을 포함하는 메인 레이아웃입니다. 이제 우리는 더 이상 새로 페이지를 만들 때 마다 markup을 반복하여 작성하지 안하도 됩니다. 사이트의 관리가 더욱 쉬워졌죠. 그럼 다음 코드를 `index.html`에서 `default.html`로 옮겨봅시다.
+
+```
+some code
+```
+
+코드에 있는 `{{ page.title }}`과 `{{ content }}`를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한건 잠시 후에 살펴보도록 합시다.
+
+10. 기본 레이아웃을 사용하기 위해 `index.html`을 업데이트해봅시다. 파일의 모든 코드르 다음과 같이 바꿔주세요.
+
+```
+some code
+```
+
+파일의 상단에 있는 플레인 텍스트(plain text)를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋할 때마다 Jekyll은 `_layout/default.html`을 불러와 `{{ content }}` 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML문서를 생성할겁니다. 정말 멋지죠!
+
+## 블로그 설정하기
+
+Jekyll을 베이스로한 블로그는 우리가 전까지 익숙해진 것관 동일한 규칙을 사용합니다. 하지만 우리는 규칙을 추가함으로써 더 많은 규칙을 따라야합니다. Jekyll은 매우 여러분이 원하는대로 사이트를 확장할 수 있도록 허용해주는 매우 융통성있는 친구입니다. 하지만 이 가이드에서는 우리는 기본 규칙만을 사용할겁니다: 포스트 생성하기, 포스트 리스트를 보여주는 페이지 만들기, 포스트에 사용될 퍼머링크(permalink) 만들기, 블로그를 위한 RSS 피드 만들기
+
+블로그의 포스트를 작성할 `post.html`라는 이름의 새로운 레이아웃을 만들고 각각의 포스트를 저장할 `_posts/`라는 폴더도 만들어봅시다.
+
+11. 레이아웃을 생성하는 것으로 시작해봅시다. `_layouts`폴더에 `post.html`을 생성해주세요. 포스트 레이아웃이 기본 레이아웃을 사용하는 것에 주의하시고, 포스트의 제목과 날짜를 표시하기 위해 몇가지 태그를 추가해줍시다:
+
+```
+some code
+```
+
+12. 
+블로그의 포스트를 저장할 `_posts/` 폴더를 만들어주세요. 폴더 안에 첫 포스트를 작성해봅시다. Jekyll은 파일의 이름을 짓는 것에 매우 엄격하므로 주의해주세요. 파일의 이름은 꼭 `YYYY-MM-DD-title-of-my-post.md`같은 형식이여야합니다. 이 파일 이름은 블로그 포스트에 사용될 퍼머링크(permalink)로 바뀝니다. 그러니 이 예제에서는, `2014-04-30-hank-quinnlan-site-launched.md`라고 지은 파일을 생성합니다:
+
+```
+some code
+```
+
+`.md` 확장자는 마크다운의 약자입니다. 그리고 파일에서 사용된 마크다운 문법은 Jekyll에 의해 HTML로 변경됩니다. 위키텍스트(Wikitext)처럼 [마크다운](https://daringfireball.net/projects/markdown/)은 플레인 텍스트(plain text)에 가까운 문법을 사용하는 마크업 언어입니다. 마크다운의 아이디어는 작성자의 방법을 벗어나서 HTML을 빠르게 작성하기 때문에 마크다운을 블로그 구문 작성에 매우 적합하게 만듭니다. 마크다운 문법에 더욱 익숙해지고 싶다면 [마크다운 문법 정리 (PDF)](http://packetlife.net/media/library/16/Markdown.pdf)가 도움이 될겁니다.
+
+새로 작성한 포스트를 커밋했다면 <http://username.github.io/YYYY/MM/DD/name-of-your-post>로 들어가 확인해보세요.
+
+모든 것이 순조롭지만 사용자는 여러분의 포스트의 URL을 정확히 모를겁니다. 그래서 다음으로 우리는 각 포스트의 제목과 링크를 리스트로 보여주는 페이지를 만들겁니다. 여러분은 여러분의 메인 페이지에 이 리스트를 만들수도 있고, 여러분의 포스트 리스트를 담은 페이지를 따로 만들 수 도 있습니다. 우리는 후자로 만들 것 입니다.
+
+13. `blog` 폴더를 만들고 폴더 안에 `index.html` 파일도 만들어주세요. 포스트 리스트를 보여주려면, 우리는 반복문을 사용하여 포스트가 정렬되지 않은 리스트를 만들겁니다:
+
+```
+some code
+```
+
+이제 <http://username.github.io/blog/>를 확인해보세요. 여러분이 작성한 첫 포스트가 링크되어 있는 것을 볼 수 있어야 합니다. 정말 잘했어요!
+
+## 블로그 커스터마이징하기
+
+*우리는 이제 막 Jekyll의 기능을 수박 겉핥기 수준으로만 배웠습니다. 이 가이드에서는 블로그에 사용할 수 있는 몇가지 단계를 더 배워볼겁니다.
+
+여러분은 아마 블로그 포스트의 URL이 블로그 폴더를 포함하지 않는다는 것을 알았을겁니다. Jekyll을 사용해 우리는 8단계에서 생성한 `_config.yml` 약간 수정해서 퍼머링크의 구조를 컨트롤할 수 있게됩니다. 블로그 폴더를 포함하게 하기 위해 퍼머링크 구조를 바꿔봅시다.
+
+14. `_config.yml` 파일을 수정해봅시다. 파일 끝부분에 다음 구문을 추가해주세요.
+
+```
+permalink: /blog/:year/:month/:day/:title
+```
+
+이제 여러분의 포스트는 <http://username.github.io/blog/YYYY/MM/DD/name-of-your-post.>에 나오게 될겁니다.
+
+블로그에 RSS 피드를 설정하는 것도 매우 간단합니다. 새로운 포스트를 작성할 때마다, 이것은 RSS파일에 추가될겁니다.
+
+15.  `blog/` 폴더안에 `atom.xml`이라는 새로운 파일을 만들고 다음 구문을 추가해주세요:
+
+```
+some code
+```
+
+이제 사용자가 여러분의 블로그를 구독하기 위해 피드 애그리게이터에 포함할 수 있도록 사이트 어딘가에 RSS 피드를 위한 링크를 포함할 수 있습니다. 피드를 확인하기 위해 <http://username.github.io/blog/atom.xml>를 확인해보세요.
+
+*Note: 크롬을 사용한다면 피드가 에러가 난 것처럼 보일 수 있지만 아닙니다. 크롬은 XML을 표시할 수 없습니다.*
+
+# 마무리
+
+16. 거의 다 끝났습니다! `about/index.html`과 `cv/index.html`을 생성하고 커밋하는 것을 잊지 마세요. 여러분이 이제 어느정도 요령을 터득한 거 같으니, 저는 이제 물러서서 여러분 스스로가 이 가이드를 끝낼 수 있도록 할겁니다.
+
+17. 더욱 나아가기 전에, [Git 설치]()과 [Jekyll]()을 읽을 시간을 가지세요. *이 튜토리얼은 웹 브라우저에서 Git에 대한 모든 것을 담고 있지만 실제론 절발 정도만 있습니다. **여러분의 GitHub 저장소에 이미지나 PDF 파일을 올리기 위해서는 이 것을 읽어야 할겁니다.** GitHub 튜토리얼과 데스크탑 앱은 설정을 쉽게 해주었습니다. 여러분은 이제 Git과 GitHub의 기본 지식에 대해 많이 알게 되었으므로 이 것을 할 수 있어야 합니다. 어서 해보세요!
+
+# 다음 단계
+
+이 가이드가 여러분에게 Git, GitHub, Jekyll 그리고 여러분의 사이트나 블로그를 할 수 있도록 자신감을 불어넣어 줬길 바랍니다. 여러분은 여기서 다른 많은 방향으로 나아갈 수 있습니다. 여러분이 이미 이에 대한 생각을 시작했겠지만 여러분이 시간을 들일 가치가 있는 것들을 몇 개 모아봤습니다:
+
+* `_includes`를 생성하세요. 이것들은  `_layouts`과 비슷하고 *단지 작은 마크업만 할 뿐이며 `_layouts`과 페이지에 삽입될 수 있습니다.
+    * `_include` 파일을 만들고 구글 웹 로그 추적 코드를 `<head>`에 작성하여 여러분의 사이트를 방문한 사람들의 통계를 확인해보세요. 여기 [예제](https://github.com/jmcglone/jmcglone.github.io/blob/master/_includes/analytics.html)가 있습니다
+    * 블로그에 댓글기능을 추가하고 싶나요? [DISQUS `_include`](https://github.com/jmcglone/jmcglone.github.io/blob/master/_includes/disqus.html)를 생성하고 [`post.html` 레이아웃을 호출](https://github.com/jmcglone/jmcglone.github.io/blob/master/_layouts/post.html)하세요.
+
+* github.io라는 URL이 싫은가요? [커스텀 도메인 설정하기](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)
+
+* [Add Blogging Pagination](https://jekyllrb.com/docs/pagination/)
+
+* 더 나은 SEO를 위해 `sitemap.xml` 파일을 만드세요. [GitHub Pages가 자동으로 생성하는 것을 가질 수 있습니다.](https://help.github.com/articles/sitemaps-for-github-pages/) 제 사이트 [사용한 것](https://github.com/jmcglone/jmcglone.github.io/blob/master/sitemap.xml)도 확인해보세요.
+
+* *코딩 전문가가 되어 여러분의 사이트의 `개발` branch를 만드세요. 버그를 고치고 새로운 기능을 추가할 때 마다, 여러분은 master branch의 복사본을 생성하고, 변경한 다음 master branch에 branch를 merge할 수 있습니다. [아이디어는 master branch를 깨끗하게 유지하는 것입니다.](https://help.github.com/desktop-classic/guides/contributing/making-changes-in-a-branch/)
+
+* 더 많은 영감이 필요한가요? [Jekyll 개발자들](https://jekyllrb.com/showcase/)이 어떻게 설치했는지나 [Jekyll을 사용한 거대한 사이트들의 리스트](https://github.com/jekyll/jekyll/wiki/Sites)를 확인해보세요.
+
+# 자원들
+
+이 리스트들을 날마다 업데이트하려고 노력하고 있습니다. 여러분이 공유하고 싶은 사이트가 있거나 작동하지 않는 링크가 있다면 [이곳](http://jmcglone.com/contact/)을 통해 알려주세요. 
+
+## Git, GitHub, GitHub Pages
+
+* [Git 문서](https://git-scm.com/doc)
+* [15분만에 Git과 GitHub 배우기](http://try.github.io/)
+* [GitHub Pages 도움말](https://help.github.com/categories/github-pages-basics/)
+* [GitHub 도움말](https://help.github.com/)
+* [GitHub 치트 시트](https://github.com/tiimgreen/github-cheat-sheet)
+* [GitHub 용어 사전](https://help.github.com/articles/github-glossary/)
+* [GitHub for Academics ](http://blogs.lse.ac.uk/impactofsocialsciences/2013/06/04/github-for-academics/)
+
+## Jekyll
+
+* [Jekyll을 사용한 사이트](https://github.com/jekyll/jekyll/wiki/Sites)
+* [Jekyll에 블로그 등록](http://import.jekyllrb.com/docs/home/)
+
+## 마크다운
+
+* [공식 마크다운 사양](https://daringfireball.net/projects/markdown/)
+* [출력 가능한 마크다운 정리 시트](http://packetlife.net/media/library/16/Markdown.pdf)
+* [마크다운 정리 시트](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [GitHub Flavored Markdown](https://help.github.com/categories/writing-on-github/)
