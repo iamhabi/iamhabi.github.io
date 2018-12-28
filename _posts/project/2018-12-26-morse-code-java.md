@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Morse Code Translater
+title: Morse Code Translator
 data: 2018-12-26
 category: project
 ---
 
-# Morse Code Translater - java
+# Morse Code Translator - java
 
 <https://github.com/iamhabi/Morse-Code-Java>
 
