@@ -32,12 +32,6 @@ code {
     max-width: 600px;
 }
 
-.alink {
-    text-decoration: none;
-    display: block;
-    color: black;
-}
-
 ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
 ul.posts li { list-style: none; }
 
@@ -55,6 +49,20 @@ div.gallery p {
 }
 
 div.gallery:hover { background-color: beige; }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: aqua;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.alink {
+    text-decoration: none;
+    display: block;
+    color: black;
+}
 
 .active { background-color: #4CAF50; }
 .content { max-width: 600px; margin: auto; }
