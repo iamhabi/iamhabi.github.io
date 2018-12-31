@@ -25,7 +25,10 @@ nav li a:hover:not(.active) { background-color: #111; }
 
 img { max-width: 600px; }
 
-a { color: blue }
+a {
+    color: blue;
+    text-decoration: none;
+}
 
 code {
     background-color: beige;
@@ -60,7 +63,6 @@ div.gallery:hover { background-color: beige; }
 
 .alink {
     text-decoration: none;
-    text-decoration-line: none;
     display: block;
     color: black;
 }
