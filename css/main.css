@@ -73,4 +73,12 @@ div.gallery:hover { background-color: beige; }
     .content { max-width: 500px; margin: auto; }
     .content-m { max-width: 500px; margin: auto; }
     .content-n { max-width: 500px; margin: auto; }
+
+    div.gallery {
+        margin: 25px;
+        border: 1px solid #ccc;
+        width: 460px;
+    }
+
+    img { width: 460px; }
 }
