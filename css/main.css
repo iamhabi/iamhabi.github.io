@@ -60,6 +60,7 @@ div.gallery:hover { background-color: beige; }
 
 .alink {
     text-decoration: none;
+    text-decoration-line: none;
     display: block;
     color: black;
 }
