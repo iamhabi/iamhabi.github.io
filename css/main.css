@@ -1,11 +1,5 @@
 body { margin: 0 auto; }
 
-@media only screen and (max-width: 400px) {
-    body {
-        background-color: red;
-    }
-}
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -74,3 +68,9 @@ div.gallery:hover { background-color: beige; }
 .content { max-width: 600px; margin: auto; }
 .content-m { max-width: 700px; margin: auto; }
 .content-n { max-width: 1000px; margin: auto; }
+
+@media only screen and (max-width: 400px) {
+    .content { max-width: 500px; margin: auto; }
+    .content-m { max-width: 500px; margin: auto; }
+    .content-n { max-width: 500px; margin: auto; }
+}
