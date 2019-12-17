@@ -25,7 +25,10 @@ nav li a:hover:not(.active) { background-color: #111; }
 
 img { max-width: 600px; }
 
-a { color: blue }
+a {
+    color: blue;
+    text-decoration: none;
+}
 
 code {
     background-color: beige;
