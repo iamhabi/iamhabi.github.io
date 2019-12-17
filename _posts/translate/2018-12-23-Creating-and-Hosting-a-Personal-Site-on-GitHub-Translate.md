@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GitHub로 개인 사이트를 만들고 배포하기"
+title: "github로 개인 사이트를 만들고 배포하기"
 date: 2018-12-23
 category: translate
 ---
@@ -9,21 +9,18 @@ category: translate
 
 > 번역 - <http://jmcglone.com/guides/github-pages/>
 
-이 가이드는 Git과 GitHub 초보자들이 [GitHub Pages](https://pages.github.com/)와 [Jekyll](https://jekyllrb.com/)을 시작할 수 있도록 돕기 위해 만들어졌습니다. 여러분이 Git, GitHub와 버전 컨트롤에 대해 거의 알지 한다고 가정하고 있습니다. 우리는 HTML과 CSS를 사용할 것이므로 이에 대해 기본적인 것들을 알고 있다면 도움이 될겁니다. 우리는 [Markdown](https://daringfireball.net/projects/markdown/)도 사용할 것이지만 이를 능숙하게 다룰 필요는 없습니다. *아이디어는 실천을 함으로써 배우는 것이므로, 이 가이드에서 사용된 코드는 모두 사용 가능하고 [GitHub 저장소](https://github.com/hankquinlan/hankquinlan.github.io/archive/master.zip)에서 다운받을 수도 있습니다. 여러분의 파일에 코드를 마음껏 복사하셔도 괜찮습니다.
+이 가이드는 Git과 GitHub 초보자들이 [GitHub Pages](https://pages.github.com/)와 [Jekyll](https://jekyllrb.com/)을 시작할 수 있도록 돕기 위해 만들어졌습니다. 여러분이 Git, GitHub와 버전 관리에 대해 거의 알지 한다고 가정하고 있습니다. 우리는 HTML과 CSS를 사용할 것이므로 이들에 대해 기본적인 것들을 알고 있다면 도움이 될겁니다. 우리는 [Markdown](https://daringfireball.net/projects/markdown/)도 사용할 것이지만 이를 능숙하게 다룰 필요는 없습니다. 아이디어는 실천을 함으로써 배우는 것이므로, 이 가이드에서 사용된 코드는 모두 사용 가능하고 [GitHub 저장소](https://github.com/hankquinlan/hankquinlan.github.io/archive/master.zip)에서 다운받을 수도 있습니다. 여러분의 프로젝트 파일에 코드를 마음껏 복사하셔도 괜찮습니다.
 
-제가 GitHub와 GitHub Pages를 저의 개인 사이트(와 다른 프로젝트들)에 사용한 이유가 궁금하시면 [이 곳](http://jmcglone.com/notes/2014/05/03/using-github-to-create-and-host-a-personal-website)을 참조해주세요.
+제 블로그(와 다른 프로젝트)에 GitHub와 GitHub Pages를 사용한 이유가 궁금하시면 [이 곳](http://jmcglone.com/notes/2014/05/03/using-github-to-create-and-host-a-personal-website)을 참조해주세요.
 
 # 여러분이 알아야 할 것들
-
-*GitHub Pages를 더 많은 사용자들이 이용할 수 있도록 하기 위해, 이 가이드는 github.com의 웹 인터페이스를 사용하여 여러분의 사이트를 만드는 것에 초점을 두고 있습니다. 따라서 Git과 GitHub에 관련된 표준 도구를 일반화합니다.
-
-*Git과 GitHub에 익숙해지기 위해(예를 들어 명령어나 터미널같은), 여러분이 알고 있어야 할 다른 훌륭한 가이드들이 있습니다. 북마크를 하고 이 가이드를 완전히 읽은 후 읽어보거나 이미 알고 있다면 건너뛰셔도 좋습니다: [Anna Debenham](https://24ways.org/2013/get-started-with-github-pages/), [Thinkful](http://www.thinkful.com/learn/a-guide-to-using-github-pages/), 그리고 [GitHub](https://pages.github.com/)는 GitHub 호스팅이나 Jekyll의 명령어나 로컬 워크플로
+GitHub Pages를 더 많은 사용자들이 이용할 수 있도록 하기 위해, 이 가이드는 github.com의 웹 인터페이스를 사용하여 여러분의 사이트를 만드는 것에 초점을 두고 있습니다. 따라서 Git과 GitHub에 관련된 표준 도구를 일반화합니다. Git과 GitHub에 익숙해지기 위해(예를 들어 명령어나 터미널같은), 여러분이 알고 있어야 할 다른 훌륭한 가이드들이 있습니다. 북마크를 하고 이 가이드를 완전히 읽은 후 읽어보거나 이미 알고 있다면 건너뛰셔도 좋습니다: [Anna Debenham](https://24ways.org/2013/get-started-with-github-pages/), [Thinkful](http://www.thinkful.com/learn/a-guide-to-using-github-pages/), 그리고 [GitHub](https://pages.github.com/)는 GitHub 호스팅이나 Jekyll의 명령어나 로컬 워크플로
 
 또 [이 문서의 끝]()에서는 Git, GitHub Pages, Jekyll과 마크다운에 여러분이 더욱 익숙해질 수 있도록 도와 줄 수 있는 매우 좋은 사이트들을 모아놨습니다. 좋은 가이드를 새로 찾는대로 리스트를 업데이트하겠습니다.
 
 # Git, GitHub 그리고 GitHub Pages가 무엇인가요?
 
-Git, GitHub, 그리고 GitHub Pages는 모두 밀접하게 관련되어있습니다. *Git은 작업을 하기 위한 것이고 GitHub와 GitHub Pages는 여러분이 한 작업을 저장하는 곳이라고 생각하세요. *Git을 사용한 프로젝트는 GitHub나 GitHub Pages에 공개적으로 저장되고 일반적으로 Git은 여러분의 로컬 컴퓨터에서 하는 작업이며, GitHub는 모든 작업을 서버에 공개적으로 저장하는 곳입니다.
+Git, GitHub, 그리고 GitHub Pages는 모두 밀접하게 관련되어있습니다. Git은 작업을 하기 위한 도구이고 GitHub와 GitHub Pages는 여러분이 한 작업을 저장하는 곳이라고 생각하세요. Git을 사용한 프로젝트는 GitHub나 GitHub Pages에 공개적으로 저장되고 일반적으로 Git은 여러분의 컴퓨터에서 하는 작업이며, GitHub는 모든 작업을 서버에 공개적으로 저장하는 곳입니다.
 
 ## Git
 
