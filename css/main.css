@@ -1,4 +1,4 @@
-body { margin: 0 auto; }
+/*body { margin: 0 auto; }*/
 
 nav ul {
     list-style-type: none;
@@ -23,16 +23,9 @@ nav li a {
 
 nav li a:hover:not(.active) { background-color: #111; }
 
-img { max-width: 600px; }
-
 a {
     color: blue;
     text-decoration: none;
-}
-
-code {
-    background-color: beige;
-    max-width: 600px;
 }
 
 ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
