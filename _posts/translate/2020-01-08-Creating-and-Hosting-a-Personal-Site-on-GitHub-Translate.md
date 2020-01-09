@@ -13,6 +13,7 @@ category: translate
 
 왜 제 블로그(와 다른 프로젝트)에 GitHub와 GitHub Pages를 사용했는지 궁금하다면 [이 곳](http://jmcglone.com/notes/2014/05/03/using-github-to-create-and-host-a-personal-website)을 참조해주세요.
 
+
 # 여러분이 알아야 할 것들
 GitHub Pages를 더 많은 사용자들이 이용할 수 있도록 하기 위해, 이 가이드는 github.com의 웹 인터페이스를 사용하여 여러분의 사이트를 만드는 것에 초점을 두고 있습니다. 따라서 Git과 GitHub에 관련된 표준 도구를 일반화합니다. Git과 GitHub에 익숙해지기 위해(예를 들어 명령어나 터미널같은), 여러분이 알고 있어야 할 다른 훌륭한 가이드들이 있습니다. 북마크를 하고 이 가이드를 완전히 읽은 후 읽어보거나, 이미 알고 있다면 건너뛰셔도 좋습니다: 
 Anna Debenham, Thinkful, and even GitHub itself go above and beyond making the command line or local workflow of GitHub hosting and Jekyll templates accessible to a wider audience.
@@ -20,9 +21,11 @@ Anna Debenham, Thinkful, and even GitHub itself go above and beyond making the c
 
 또 [이 문서의 끝]()에서는 Git, GitHub Pages, Jekyll과 마크다운에 여러분이 더욱 익숙해질 수 있도록 도와 줄 매우 좋은 사이트들을 모아놨습니다. 좋은 가이드를 찾는대로 리스트를 업데이트하겠습니다.
 
+
 # Git, GitHub 그리고 GitHub Pages가 무엇인가요?
 
 Git, GitHub, 그리고 GitHub Pages는 모두 밀접하게 관련되어 있습니다. Git은 작업을 하기 위한 도구이고 GitHub와 GitHub Pages는 여러분이 한 작업을 저장하는 곳이라고 생각하세요. Git을 사용한 프로젝트는 GitHub나 GitHub Pages에 공개적으로 저장됩니다. 일반적으로 Git은 여러분의 컴퓨터에서 하는 작업이며, GitHub는 모든 작업을 서버에 공개적으로 저장하는 곳입니다.
+
 
 ## Git
 
@@ -37,6 +40,7 @@ Git은 효율적인 방식으로 여러 버전으로 파일을 유지하고 다�
 Git의 흐름은 양방향입니다. 각 변경 사항의 중요 부분은 버전에서 중요하다고 표시되고, 여러분은 계속 진행합니다. 만약 이전 단계로 돌아가야 한다면 여러분은 현재 데이터의 손실 없이 돌아갈 수 있습니다. 구글 문서의 "revision history"나 위키피디아의 "edit history"가 이런 방식으로 작동합니다. Git은 필요하다면 훨씬 자세하고 더 복잡해질 수 있습니다.
 
 만약 기회가 생기면 [Git에 대한 15분 웹 자습서](http://try.github.io/)를 **강력히 추천**합니다.
+
 
 ## GitHub
 
@@ -53,13 +57,16 @@ GitHub에는 정말 멋지고 재미있는 저장소들이 정말 많으며, 매
 
 ![](http://jmcglone.com/img/guides/github-ruby-on-rails.png)
 
+
 ## GitHub Pages
 
 GitHub Pages는 GitHub를 통해 무료로 호스팅 되는 공개 웹 페이지입니다. GitHub 유저들은 개인 웹사이트(유저 당 하나의 웹사이트만 허용됨)와 특정 GitHub 프로젝트에 대한 사이트를 만들고 호스팅을 할 수 있습니다. GitHub Pages는 GitHub와 동일한 방식으로 작업을 할 수 있도록 해주지만, 저장소의 이름이 특정 방식으로 지정되어 있고 파일이 HTML이나 마크다운 형식이라면 파일을 웹사이트처럼 볼 수 있습니다. GitHub Pages는 GitHub의 자기 인식 버전입니다. GitHub Pages는 또한 우리가 배울 [Jekyll](https://jekyllrb.com/)이라고 부르는 강력한 [사이트 생성기](https://www.staticgen.com/) 포함합니다.
 
+
 # GitHub Pages 시작하기
 
 만약 이런 개념의 일부가 아직 이해되지 않아도 걱정하지 마세요. 이것을 배우는 가장 좋은 방법은 직접 해보는 것이므로 더 이상 시간을 낭비하지 말고 시작해봅시다.
+
 
 1. 저장소를 생성합시다. GitHub에 로그인을 하고 <https://github.com/new>에 들어가거나 New Repository 아이콘을 클릭하세요.
 
@@ -77,34 +84,34 @@ GitHub Pages는 GitHub를 통해 무료로 호스팅 되는 공개 웹 페이지
 GitHub 편집기에 다음 코드를 작성해주세요.
 
 ```
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+<!DOCTYPE html>    
+<html>    
+	<head>    
+		<title>Hank Quinlan, Horrible Cop</title>    
+	</head>    
+	<body>    
+		<nav>    
+    		<ul>    
+        		<li><a href="/">Home</a></li>    
+	        	<li><a href="/about">About</a></li>    
+        		<li><a href="/cv">CV</a></li>    
+        		<li><a href="/blog">Blog</a></li>    
+    		</ul>    
+		</nav>    
+		<div class="container">    
+    		<div class="blurb">    
+        		<h1>Hi there, I'm Hank Quinlan!</h1>    
+				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>    
+    		</div><!-- /.blurb -->    
+		</div><!-- /.container -->    
+		<footer>    
+    		<ul>    
+        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>    
+        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>    
+			</ul>    
+		</footer>    
+	</body>    
+</html>    
 ```
 
 4. `index.html`을 커밋해봅시다. 페이지의 하단에 변경에 대한 설명을 작성하기 위한 입력창과 파일을 커밋하기 위한 버튼이 있습니다.
@@ -120,49 +127,49 @@ GitHub 편집기에 다음 코드를 작성해주세요.
 다음 코드를 `main.css`에 입력해주세요.
 
 ```
-body {
-    margin: 60px auto;
-    width: 70%;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
+body {    
+    margin: 60px auto;    
+    width: 70%;    
+}    
+nav ul, footer ul {    
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';    
+    padding: 0px;    
+    list-style: none;    
+    font-weight: bold;    
+}    
+nav ul li, footer ul li {    
+    display: inline;    
+    margin-right: 20px;    
+}    
+a {    
+    text-decoration: none;    
+    color: #999;    
+}    
+a:hover {    
+    text-decoration: underline;    
+}    
+h1 {    
+    font-size: 3em;    
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';    
+}    
+p {    
+    font-size: 1.5em;    
+    line-height: 1.4em;    
+    color: #333;    
+}    
+footer {    
+    border-top: 1px solid #d5d5d5;    
+    font-size: .8em;    
+}    
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
+ul.posts {    
+    margin: 20px auto 40px;    
+    font-size: 1.5em;    
+}    
 
-ul.posts li {
-    list-style: none;
-}
+ul.posts li {    
+    list-style: none;    
+}    
 ```
 
 새로 만든 CSS 파일을 꼭 커밋하세요!
@@ -176,39 +183,40 @@ ul.posts li {
 `main.css` 파일을 링크해주세요. (추가된 내용이 굵게 표시됩니다):
 
 ```
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-		**<!-- link to main stylesheet -->**
-		**<link rel="stylesheet" type="text/css" href="/css/main.css">**
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+<!DOCTYPE html>    
+<html>    
+	<head>    
+		<title>Hank Quinlan, Horrible Cop</title>    
+		`**`<!-- link to main stylesheet -->`**`  
+		**`<link rel="stylesheet" type="text/css" href="/css/main.css">`**  
+	</head>    
+	<body>    
+		<nav>    
+    		<ul>    
+        		<li><a href="/">Home</a></li>    
+	        	<li><a href="/about">About</a></li>    
+        		<li><a href="/cv">CV</a></li>    
+        		<li><a href="/blog">Blog</a></li>    
+    		</ul>    
+		</nav>    
+		<div class="container">    
+    		<div class="blurb">    
+        		<h1>Hi there, I'm Hank Quinlan!</h1>    
+				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>    
+    		</div><!-- /.blurb -->    
+		</div><!-- /.container -->    
+		<footer>    
+    		<ul>    
+        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>    
+        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>    
+			</ul>    
+		</footer>    
+	</body>    
+</html>    
 ```
 
 <https://username.github.io>를 방문해 여러분이 꾸민 사이트를 확인해보세요. <https://hankquinlan.github.io>랑 똑같이 보여야 합니다.
+
 
 # GitHub Pages에 Jekyll 사용하기
 
@@ -216,11 +224,13 @@ GitHub Pages처럼 Jekyll은 자기인식을 하므로 만약 특정 규칙에 �
 
 여러분의 컴퓨터에 Jekyll을 설정하여 사이트를 편집하고 바로 확인 할 수 있도록 하고 준비가 되면 GitHub 저장소에 변경 사항을 push하는 것이 좋지만, 우리는 그렇게 하지 않을 겁니다. 대신에 우리는 Jekyll이 어떻게 작동하는지 빠르게 알아보기 위해 GitHub 웹 인터페이스를 사용하여 우리의 GitHub 저장소에 구축해볼겁니다.
 
+
 ## Jekyll이 무엇인가요?
 
 Jekyll은 매우 강력한 정적 사이트 생성기입니다. 어떤 면에서, 이것은 사이트의 콘텐츠를 저장하기 위해 데이터베이스를 사용하기 전인 정적 HTML 시대로 돌아가는 겁니다. 개인 사이트같이 복잡한 구조가 없는 간단한 사이트에게 이것은 커다란 장점입니다. GitHub와 함께 사용하는 경우, 파일을 커밋할 때 마다 Jekyll은 여러분의 사이트의 HTML 페이지를 자동으로 재구축할 겁니다.
 
 Jekyll은 템플릿에 의존하기 때문에 여러분의 웹사이트를 더 쉽게 관리합니다. 정적 사이트 생성기를 사용할 때 템플릿 (또는 Jekyll 명명법)은 여러분의의 가장 친한 친구입니다. navigation 아이템의 위치를 추가, 삭제 또는 변경하면 모든 페이지에서 navigatnoin 코드를 변경해야 하는 대신에, Jekyll이 모든 페이지에서 사용되는 레이아웃을 만들 수 있습니다. 이 튜토리얼에서 우리는 여러분의 웹사이트 구축을 도와줄 두 개의 Jekyll 템플릿을 생성할 겁니다.
+
 
 ## github.com에서 Jekyll 세팅하기
 
@@ -239,7 +249,7 @@ _site/
 8. Jekyll에게 여러분의 프로젝트에 대한 몇가지 기본사항을 알려주는 `_config.yml` 파일을 만들어봅시다. 이 예제에서 우리는 Jekyll에게 우리 사이트의 이름과 우리가 사용할 마크다운의 버전을 알려줍니다.
 
 ```
-name: Hank Quinian, Horrible Cop  
+name: Hank Quinian, Horrible Cop     
 markdown: kramdown
 ```
 
@@ -250,35 +260,35 @@ markdown: kramdown
 이 파일은 `<head>`와 `<footer>`같은 반복되는 요소들을 포함하는 메인 레이아웃입니다. 이제 우리는 더 이상 새로 페이지를 만들 때마다 markup을 반복하여 작성하지 않아도 됩니다. 사이트의 관리가 더욱 쉬워졌죠. 그럼 다음 코드를 `index.html`에서 `default.html`로 옮겨봅시다.
 
 ```
-<!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
+<!DOCTYPE html>    
+	<html>    
+		<head>    
+			<title>{{ page.title }}</title>    
+			<!-- link to main stylesheet -->    
+			<link rel="stylesheet" type="text/css" href="/css/main.css">    
+		</head>    
+		<body>    
+			<nav>    
+	    		<ul>    
+	        		<li><a href="/">Home</a></li>    
+		        	<li><a href="/about">About</a></li>    
+	        		<li><a href="/cv">CV</a></li>    
+	        		<li><a href="/blog">Blog</a></li>    
+	    		</ul>    
+			</nav>    
+			<div class="container">    
 			
-			{{ content }}
+			{{ content }}    
 			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+			</div><!-- /.container -->    
+			<footer>    
+	    		<ul>    
+	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>    
+	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>    
+				</ul>    
+			</footer>    
+		</body>    
+	</html>    
 ```
 
 코드에 있는 {{page.title}}과 {{content}}를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.
@@ -286,17 +296,18 @@ markdown: kramdown
 10. 기본 레이아웃을 사용하기 위해 `index.html`을 업데이트해봅시다. 파일의 모든 코드를 다음과 같이 바꿔주세요.
 
 ```
----
-layout: default
-title: Hank Quinlan, Horrible Cop
----
-<div class="blurb">
-	<h1>Hi there, I'm Hank Quinlan!</h1>
-	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
+---    
+layout: default    
+title: Hank Quinlan, Horrible Cop    
+---    
+<div class="blurb">    
+	<h1>Hi there, I'm Hank Quinlan!</h1>    
+	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>    
+</div><!-- /.blurb -->    
 ```
 
 파일의 상단에 있는 plain text를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할 겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋을 할 때마다 Jekyll은 `_layout/default.html`을 불러와 {{content}} 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML 문서를 생성할 겁니다. 정말 대단하죠!
+
 
 ## 블로그 설정하기
 
@@ -307,27 +318,27 @@ Jekyll을 베이스로 한 블로그는 우리가 방금 전까지 익숙해진 
 11. 레이아웃을 생성하는 것으로 시작해봅시다. `_layouts`폴더에 `post.html`을 생성해주세요. 포스트 레이아웃이 기본 레이아웃을 사용하는 것에 주의하시고, 포스트의 제목과 날짜를 표시하기 위해 몇 가지 태그를 추가해줍시다.
 
 ```
----
-layout: default
----
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
+---    
+layout: default    
+---    
+<h1>{{ page.title }}</h1>    
+<p class="meta">{{ page.date | date_to_string }}</p>    
 
-<div class="post">
-  {{ content }}
-</div>
+<div class="post">    
+  {{ content }}    
+</div>    
 ```
 
 12. 블로그의 포스트를 저장할 `_posts/` 디렉터리를 만들어주세요. 폴더 안에 첫 포스트를 작성해봅시다. Jekyll은 파일의 이름을 짓는 것에 매우 엄격하므로 주의해주세요. 파일의 이름은 꼭 `YYYY-MM-DD-title-of-my-post.md`같은 형식이어야합니다. 이 파일 이름은 블로그 포스트에 사용될 고유주소로 바뀝니다. 그러니 이 예제에서는, `2014-04-30-hank-quinnlan-site-launched.md`라고 지은 파일을 생성합니다.
 
 ```
----
-layout: post
-title: "Hank Quinlan, Horrible Cop, Launches Site"
-date: 2014-04-30
----
+---    
+layout: post    
+title: "Hank Quinlan, Horrible Cop, Launches Site"    
+date: 2014-04-30    
+---    
 
-Well. Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.
+Well. Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.    
 ```
 
 `.md` 확장자는 마크다운의 약자입니다. 그리고 파일에서 사용된 마크다운 문법은 Jekyll에 의해 HTML로 변경됩니다. Wikitext처럼 [마크다운](https://daringfireball.net/projects/markdown/)은 plain text에 가까운 문법을 사용하는 마크업 언어입니다. 마크다운의 아이디어는 작성자의 방법을 벗어나서 HTML을 빠르게 작성하기 때문에 마크다운을 블로그 작성에 매우 적합하게 만듭니다. 마크다운 문법에 더욱 익숙해지고 싶다면 [마크다운 문법 정리 (PDF)](http://packetlife.net/media/library/16/Markdown.pdf)가 도움이 될 겁니다.
@@ -339,20 +350,21 @@ Well. Finally got around to putting this old website together. Neat thing about 
 13. `blog` 디렉터리를 만들고 폴더 안에 `index.html` 파일도 만들어주세요. 포스트 리스트를 보여주려면, 우리는 반복문을 사용하여 포스트가 정렬되지 않은 리스트를 만들 겁니다.
 
 ```
----
-layout: default
-title: Hank Quinlan's Blog
----
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
+---    
+layout: default    
+title: Hank Quinlan's Blog    
+---    
+	<h1>{{ page.title }}</h1>    
+	<ul class="posts">    
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+	  {% for post in site.posts %}    
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>    
+	  {% endfor %}    
+	</ul>    
 ```
 
 이제 <http://username.github.io/blog/>를 확인해보세요. 여러분이 작성한 첫 포스트가 링크되어 있는 것을 볼 수 있어야 합니다. 정말 잘했어요!
+
 
 ## 블로그 커스터마이징하기
 
@@ -373,38 +385,39 @@ permalink: /blog/:year/:month/:day/:title
 15.  `blog/` 디렉터리 안에 `atom.xml`이라는 새로운 파일을 만들고 다음 코드를 추가해주세요:
 
 ```
----
-layout: feed
----
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+---    
+layout: feed    
+---    
+<?xml version="1.0" encoding="utf-8"?>    
+<feed xmlns="http://www.w3.org/2005/Atom">    
 
-	<title>Hank Quinlan's Blog</title>
-	<link href="http://hankquinlan.github.io/blog/atom.xml" rel="self"/>
-	<link href="http://hankquinlan.github.io/blog"/>
-	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://hankquinlan.github.io/blog</id>
-	<author>
-		<name>Hank Quinlan</name>
-		<email>hankquinlanhub@gmail.com</email>
-	</author>
+	<title>Hank Quinlan's Blog</title>    
+	<link href="http://hankquinlan.github.io/blog/atom.xml" rel="self"/>    
+	<link href="http://hankquinlan.github.io/blog"/>    
+	<updated>{{ site.time | date_to_xmlschema }}</updated>    
+	<id>http://hankquinlan.github.io/blog</id>    
+	<author>    
+		<name>Hank Quinlan</name>    
+		<email>hankquinlanhub@gmail.com</email>    
+	</author>    
 
-	{% for post in site.posts %}
-		<entry>
-			<title>{{ post.title }}</title>
-			<link href="http://hankquinlan.github.io{{ post.url }}"/>
-			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>http://hankquinlan.github.io{{ post.id }}</id>
-			<content type="html">{{ post.content | xml_escape }}</content>
-		</entry>
-	{% endfor %}
+	{% for post in site.posts %}    
+		<entry>    
+			<title>{{ post.title }}</title>    
+			<link href="http://hankquinlan.github.io{{ post.url }}"/>    
+			<updated>{{ post.date | date_to_xmlschema }}</updated>    
+			<id>http://hankquinlan.github.io{{ post.id }}</id>    
+			<content type="html">{{ post.content | xml_escape }}</content>    
+		</entry>    
+	{% endfor %}    
 
-</feed>
+</feed>    
 ```
 
 이제 사용자가 여러분의 블로그를 구독하기 위해 feed aggregator에 포함할 수 있도록 사이트 어딘가에 RSS 피드를 위한 링크를 포함할 수 있습니다. 피드를 확인하기 위해 <http://username.github.io/blog/atom.xml>를 확인해보세요.
 
 *Note: 크롬을 사용한다면 피드가 에러가 난 것처럼 보일 수 있지만 아닙니다. 크롬은 XML을 표시할 수 없습니다.*
+
 
 # 마무리
 
@@ -430,9 +443,11 @@ layout: feed
 
 * 더 많은 영감이 필요한가요? [Jekyll 개발자들](https://jekyllrb.com/showcase/)이 [Jekyll을 사용한 거대한 사이트들의 리스트](https://github.com/jekyll/jekyll/wiki/Sites)를 어떻게 설정하거나 탐색했는지 확인해보세요.
 
+
 # 리소스
 
 이 리스트를 날마다 업데이트하려고 노력하고 있습니다. 여러분이 공유하고 싶은 사이트가 있거나 작동하지 않는 링크가 있다면 [이곳](http://jmcglone.com/contact/)을 통해 알려주세요. 
+
 
 ## Git, GitHub, GitHub Pages
 
@@ -444,10 +459,12 @@ layout: feed
 * [GitHub 용어 사전](https://help.github.com/articles/github-glossary/)
 * [GitHub for Academics ](http://blogs.lse.ac.uk/impactofsocialsciences/2013/06/04/github-for-academics/)
 
+
 ## Jekyll
 
 * [Jekyll을 사용한 사이트](https://github.com/jekyll/jekyll/wiki/Sites)
 * [Jekyll에 블로그 등록](http://import.jekyllrb.com/docs/home/)
+
 
 ## 마크다운
 
