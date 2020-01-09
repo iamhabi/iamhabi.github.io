@@ -10,7 +10,7 @@ title: iamhabi
                 <h1 style="text-align: center; margin-top: 10px;">
                     {{ post.title }}
                 </h1>
-                <p>{{ post.excerpt | strip_html }}</p>
+                <p>{{ post.excerpt | strip_html | truncatewords: 100, '...' }}</p>
             </div>
         </a>
         {% endfor %}
