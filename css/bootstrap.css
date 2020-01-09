@@ -358,7 +358,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.2;
 }
 
@@ -503,7 +503,6 @@ mark,
 code {
   font-size: 87.5%;
   color: #e83e8c;
-  word-wrap: break-word;
   padding: 2px 4px;
   white-space: nowrap;
   background-color: beige;
@@ -529,18 +528,18 @@ kbd kbd {
 }
 
 pre {
+  display: block;
+  font-size: 87.5%;
+  color: #212529;
+}
+
+pre code {
   padding: 0;
   font-size: inherit;
   color: inherit;
   white-space: pre-wrap;
   background-color: transparent;
   border: 0;
-}
-
-pre code {
-  font-size: inherit;
-  color: inherit;
-  word-break: normal;
 }
 
 .pre-scrollable {

@@ -77,7 +77,34 @@ GitHub Pages는 GitHub를 통해 무료로 호스팅 되는 공개 웹 페이지
 GitHub 편집기에 다음 코드를 작성해주세요.
 
 ```
-some code
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hank Quinlan, Horrible Cop</title>
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/cv">CV</a></li>
+        		<li><a href="/blog">Blog</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        		<h1>Hi there, I'm Hank Quinlan!</h1>
+				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
+        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
 ```
 
 4. `index.html`을 커밋해봅시다. 페이지의 하단에 변경에 대한 설명을 작성하기 위한 입력창과 파일을 커밋하기 위한 버튼이 있습니다.
@@ -93,7 +120,49 @@ some code
 다음 코드를 `main.css`에 입력해주세요.
 
 ```
-some code
+body {
+    margin: 60px auto;
+    width: 70%;
+}
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
 ```
 
 새로 만든 CSS 파일을 꼭 커밋하세요!
@@ -107,7 +176,36 @@ some code
 `main.css` 파일을 링크해주세요. (추가된 내용이 굵게 표시됩니다):
 
 ```
-some code
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hank Quinlan, Horrible Cop</title>
+		**<!-- link to main stylesheet -->**
+		**<link rel="stylesheet" type="text/css" href="/css/main.css">**
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/cv">CV</a></li>
+        		<li><a href="/blog">Blog</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        		<h1>Hi there, I'm Hank Quinlan!</h1>
+				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
+        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
 ```
 
 <https://username.github.io>를 방문해 여러분이 꾸민 사이트를 확인해보세요. <https://hankquinlan.github.io>랑 똑같이 보여야 합니다.
@@ -141,7 +239,7 @@ _site/
 8. Jekyll에게 여러분의 프로젝트에 대한 몇가지 기본사항을 알려주는 `_config.yml` 파일을 만들어봅시다. 이 예제에서 우리는 Jekyll에게 우리 사이트의 이름과 우리가 사용할 마크다운의 버전을 알려줍니다.
 
 ```
-name: Hank Quinian, Horrible Cop
+name: Hank Quinian, Horrible Cop  
 markdown: kramdown
 ```
 
@@ -152,18 +250,53 @@ markdown: kramdown
 이 파일은 `<head>`와 `<footer>`같은 반복되는 요소들을 포함하는 메인 레이아웃입니다. 이제 우리는 더 이상 새로 페이지를 만들 때마다 markup을 반복하여 작성하지 않아도 됩니다. 사이트의 관리가 더욱 쉬워졌죠. 그럼 다음 코드를 `index.html`에서 `default.html`로 옮겨봅시다.
 
 ```
-some code
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about">About</a></li>
+	        		<li><a href="/cv">CV</a></li>
+	        		<li><a href="/blog">Blog</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			{{ content }}
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
+	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
+				</ul>
+			</footer>
+		</body>
+	</html>
 ```
 
-코드에 있는 `{{` `page.title`과 `{{` `content` `}}`를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.
+코드에 있는 {{page.title}}과 {{content}}를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.
 
 10. 기본 레이아웃을 사용하기 위해 `index.html`을 업데이트해봅시다. 파일의 모든 코드를 다음과 같이 바꿔주세요.
 
 ```
-some code
+---
+layout: default
+title: Hank Quinlan, Horrible Cop
+---
+<div class="blurb">
+	<h1>Hi there, I'm Hank Quinlan!</h1>
+	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+</div><!-- /.blurb -->
 ```
 
-파일의 상단에 있는 plain text를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할 겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋을 할 때마다 Jekyll은 `_layout/default.html`을 불러와 `{{` `content` `}}` 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML 문서를 생성할 겁니다. 정말 대단하죠!
+파일의 상단에 있는 plain text를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할 겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋을 할 때마다 Jekyll은 `_layout/default.html`을 불러와 {{content}} 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML 문서를 생성할 겁니다. 정말 대단하죠!
 
 ## 블로그 설정하기
 
@@ -174,13 +307,27 @@ Jekyll을 베이스로 한 블로그는 우리가 방금 전까지 익숙해진 
 11. 레이아웃을 생성하는 것으로 시작해봅시다. `_layouts`폴더에 `post.html`을 생성해주세요. 포스트 레이아웃이 기본 레이아웃을 사용하는 것에 주의하시고, 포스트의 제목과 날짜를 표시하기 위해 몇 가지 태그를 추가해줍시다.
 
 ```
-some code
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<p class="meta">{{ page.date | date_to_string }}</p>
+
+<div class="post">
+  {{ content }}
+</div>
 ```
 
 12. 블로그의 포스트를 저장할 `_posts/` 디렉터리를 만들어주세요. 폴더 안에 첫 포스트를 작성해봅시다. Jekyll은 파일의 이름을 짓는 것에 매우 엄격하므로 주의해주세요. 파일의 이름은 꼭 `YYYY-MM-DD-title-of-my-post.md`같은 형식이어야합니다. 이 파일 이름은 블로그 포스트에 사용될 고유주소로 바뀝니다. 그러니 이 예제에서는, `2014-04-30-hank-quinnlan-site-launched.md`라고 지은 파일을 생성합니다.
 
 ```
-some code
+---
+layout: post
+title: "Hank Quinlan, Horrible Cop, Launches Site"
+date: 2014-04-30
+---
+
+Well. Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.
 ```
 
 `.md` 확장자는 마크다운의 약자입니다. 그리고 파일에서 사용된 마크다운 문법은 Jekyll에 의해 HTML로 변경됩니다. Wikitext처럼 [마크다운](https://daringfireball.net/projects/markdown/)은 plain text에 가까운 문법을 사용하는 마크업 언어입니다. 마크다운의 아이디어는 작성자의 방법을 벗어나서 HTML을 빠르게 작성하기 때문에 마크다운을 블로그 작성에 매우 적합하게 만듭니다. 마크다운 문법에 더욱 익숙해지고 싶다면 [마크다운 문법 정리 (PDF)](http://packetlife.net/media/library/16/Markdown.pdf)가 도움이 될 겁니다.
@@ -192,7 +339,17 @@ some code
 13. `blog` 디렉터리를 만들고 폴더 안에 `index.html` 파일도 만들어주세요. 포스트 리스트를 보여주려면, 우리는 반복문을 사용하여 포스트가 정렬되지 않은 리스트를 만들 겁니다.
 
 ```
-some code
+---
+layout: default
+title: Hank Quinlan's Blog
+---
+	<h1>{{ page.title }}</h1>
+	<ul class="posts">
+
+	  {% for post in site.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
 ```
 
 이제 <http://username.github.io/blog/>를 확인해보세요. 여러분이 작성한 첫 포스트가 링크되어 있는 것을 볼 수 있어야 합니다. 정말 잘했어요!
@@ -216,7 +373,33 @@ permalink: /blog/:year/:month/:day/:title
 15.  `blog/` 디렉터리 안에 `atom.xml`이라는 새로운 파일을 만들고 다음 코드를 추가해주세요:
 
 ```
-some code
+---
+layout: feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Hank Quinlan's Blog</title>
+	<link href="http://hankquinlan.github.io/blog/atom.xml" rel="self"/>
+	<link href="http://hankquinlan.github.io/blog"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://hankquinlan.github.io/blog</id>
+	<author>
+		<name>Hank Quinlan</name>
+		<email>hankquinlanhub@gmail.com</email>
+	</author>
+
+	{% for post in site.posts %}
+		<entry>
+			<title>{{ post.title }}</title>
+			<link href="http://hankquinlan.github.io{{ post.url }}"/>
+			<updated>{{ post.date | date_to_xmlschema }}</updated>
+			<id>http://hankquinlan.github.io{{ post.id }}</id>
+			<content type="html">{{ post.content | xml_escape }}</content>
+		</entry>
+	{% endfor %}
+
+</feed>
 ```
 
 이제 사용자가 여러분의 블로그를 구독하기 위해 feed aggregator에 포함할 수 있도록 사이트 어딘가에 RSS 피드를 위한 링크를 포함할 수 있습니다. 피드를 확인하기 위해 <http://username.github.io/blog/atom.xml>를 확인해보세요.
