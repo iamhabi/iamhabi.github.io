@@ -503,11 +503,11 @@ mark,
 code {
   font-size: 87.5%;
   color: #e83e8c;
-  word-wrap: break-word;
-  background-color: beige;
-  border-radius: 25px;
-  background-position: left top;
-  background-repeat: repeat;
+  /* word-wrap: break-word; */
+  padding: 2px 4px;
+  white-space: nowrap;
+  background-color: #f9f2f4;
+  border-radius: 4px;
 }
 
 a > code {
@@ -535,9 +535,15 @@ pre {
 }
 
 pre code {
+  padding: 0;
   font-size: inherit;
   color: inherit;
-  word-break: normal;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+  /* font-size: inherit;
+  color: inherit;
+  word-break: normal; */
 }
 
 .pre-scrollable {

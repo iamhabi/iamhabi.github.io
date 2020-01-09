@@ -153,9 +153,10 @@ markdown: kramdown
 
 ```
 some code
+{{ page.title }}
 ```
 
-코드에 있는 `{{`` page.title ``}}`과 `{{`` content ``}}`를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.
+코드에 있는 &{&{ page.title &}&}과 &{&{ content &}&}를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.
 
 10. 기본 레이아웃을 사용하기 위해 `index.html`을 업데이트해봅시다. 파일의 모든 코드를 다음과 같이 바꿔주세요.
 
@@ -163,7 +164,7 @@ some code
 some code
 ```
 
-파일의 상단에 있는 plain text를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할 겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋을 할 때마다 Jekyll은 `_layout/default.html`을 불러와 {{ content }} 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML 문서를 생성할 겁니다. 정말 대단하죠!
+파일의 상단에 있는 plain text를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할 겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋을 할 때마다 Jekyll은 `_layout/default.html`을 불러와 `{{ content }}` 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML 문서를 생성할 겁니다. 정말 대단하죠!
 
 ## 블로그 설정하기
 
