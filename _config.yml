@@ -1,2 +1,4 @@
 name: iamhabi
 markdown: kramdown
+
+theme: jekyll-theme-midnight
