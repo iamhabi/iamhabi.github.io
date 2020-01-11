@@ -3,13 +3,13 @@ layout: default
 title: iamhabi
 ---
 
-<div class="content-post">
+<div class="post">
     {% for post in site.posts %}
-    <a href="{{ post.url }}" title="{{ post.title }}" class="alink">
-        <h1>
-            {{ post.title }}
-        </h1>
-    </a>
+    <h1>
+        <a href="{{ post.url }}" title="{{ post.title }}" class="title">
+                {{ post.title }}
+        </a>
+    </h1>
     <p>{{ post.excerpt | strip_html | truncatewords: 100, '...' }}</p>
     {% endfor %}
 </div>
