@@ -6,14 +6,14 @@ title: Translate
 <div class="content-m">
         {% for post in site.posts %}
             {% if post.category == "translate" %}
-            <a href="{{ post.url }}" title="{{ post.title }}" class="alink">
-                <div class="gallery">
-                    <h1 style="text-align:center; margin-top: 10px;">
+            <div class="gallery">
+                <h1>
+                    <a href="{{ post.url }}" title="{{ post.title }}" class="title">
                         {{ post.title }}
-                    </h1>
-                    <p>{{ post.excerpt | strip_html | truncatewords: 100, '...' }}</p>
-                </div>
-            </a>
+                    </a>
+                </h1>
+                <p>{{ post.date | date_to_string }}</p>
+            </div>
             {% endif %}
         {% endfor %}
 </div>
