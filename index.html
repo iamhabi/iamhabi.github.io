@@ -5,11 +5,13 @@ title: iamhabi
 
 <div class="post">
     {% for post in site.posts %}
-    <h1>
-        <a href="{{ post.url }}" title="{{ post.title }}" class="title">
+    <div class="gallery">
+        <h1>
+            <a href="{{ post.url }}" title="{{ post.title }}" class="title">
                 {{ post.title }}
-        </a>
-    </h1>
-    <p>{{ post.excerpt | strip_html | truncatewords: 100, '...' }}</p>
+            </a>
+        </h1>
+    <p>    {{ post.excerpt | strip_html | truncatewords: 100, '...' }}</p>
+    </div>
     {% endfor %}
 </div>
