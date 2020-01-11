@@ -34,9 +34,7 @@ ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
 ul.posts li { list-style: none; }
 
 div.gallery {
-    margin: 25px;
-    border: 1px solid #ccc;
-    width: 700px;
+    width: 1000px;
 }
 
 div.gallery p {
@@ -45,8 +43,6 @@ div.gallery p {
     margin: auto;
     margin-bottom: 7px;
 }
-
-div.gallery:hover { background-color: beige; }
 
 .dot {
     height: 25px;
@@ -64,5 +60,6 @@ div.gallery:hover { background-color: beige; }
 
 .active { background-color: #4CAF50; }
 .content { max-width: 600px; margin: auto; }
-.content-m { max-width: 700px; margin: auto; }
-.content-n { max-width: 1000px; margin: auto; }
+.content-post { max-width: 700px; margin: auto; }
+.nav { max-width: 1000px; margin: auto; }
+.post_title { max-width: 1000px; margin: auto; }
