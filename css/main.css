@@ -35,12 +35,8 @@ ul.posts li { list-style: none; }
 
 div.gallery {
     width: 1000px;
-}
-
-div.gallery p {
-    max-width: 400px;
-    margin: auto;
-    margin-bottom: 7px;
+    margin-top:50px;
+    margin-bottom: 50px;
 }
 
 .dot {
