@@ -62,5 +62,5 @@ div.gallery p {
 .active { background-color: #4CAF50; }
 .content { max-width: 600px; margin: auto; }
 .content-post { max-width: 700px; margin: auto; }
-.nav { max-width: 1000px; margin: auto; }
+.nav { max-width: 1000px; margin: auto; text-decoration: none; }
 .post_title { max-width: 1000px; margin: auto; }
