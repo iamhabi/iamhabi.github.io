@@ -74,8 +74,8 @@ ol li::before {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  height: 30px;
-  width: 30px;
+  height: 27px;
+  width: 27px;
   border-radius: 50%;
   background-color: aqua;
   display: inline-block;
