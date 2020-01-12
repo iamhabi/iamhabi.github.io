@@ -63,11 +63,11 @@ GitHub Pages는 GitHub를 통해 무료로 호스팅 되는 공개 웹 페이지
 
 1. 저장소를 생성합시다. GitHub에 로그인을 하고 <https://github.com/new>에 들어가거나 New Repository 아이콘을 클릭하세요.    
     
-![](http://jmcglone.com/img/guides/01-create-repo.png)    
+ ![](http://jmcglone.com/img/guides/01-create-repo.png)    
 
 2. 저장소 이름을 `username.github.io`로 설정하세요. `username`은 여러분의 GitHub 사용자명(username)을 쓰세요. Public이 체크되어 있는지 확인하고 저장소 생성 시 README도 생성해주세요.    
     
-![](http://jmcglone.com/img/guides/02-name-repo.png)    
+ ![](http://jmcglone.com/img/guides/02-name-repo.png)    
 
 3. 저장소 이름 옆에 있는 플러스 아이콘을 눌러 `index.html`파일을 생성하세요.     
     
@@ -281,7 +281,7 @@ markdown: kramdown
 	</html>    
 ```
 
-코드에 있는 {% raw %}{{ page.title }}{% endraw %}과 {% raw %}{{ content }}{% endraw %}를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.    
+코드에 있는 `{% raw %}{{ page.title }}{% endraw %}`과 `{% raw %}{{ content }}{% endraw %}`를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.    
 
 10. 기본 레이아웃을 사용하기 위해 `index.html`을 업데이트해봅시다. 파일의 모든 코드를 다음과 같이 바꿔주세요.
 
@@ -296,7 +296,7 @@ title: Hank Quinlan, Horrible Cop
 </div><!-- /.blurb -->    
 ```
 
-파일의 상단에 있는 plain text를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할 겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋을 할 때마다 Jekyll은 `_layout/default.html`을 불러와 {% raw %}{{ content }}{% endraw %} 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML 문서를 생성할 겁니다. 정말 대단하죠!    
+파일의 상단에 있는 plain text를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할 겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋을 할 때마다 Jekyll은 `_layout/default.html`을 불러와 {% raw %}`{{ content }}`{% endraw %} 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML 문서를 생성할 겁니다. 정말 대단하죠!    
 
 ## 블로그 설정하기
 
