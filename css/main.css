@@ -82,7 +82,9 @@ ol li::before {
 
 /* For desktop: */
 @media only screen and (max-width: 768px) {
-.nav {
-    max-width: 1000px;
-}
+.title {
+    text-decoration: none;
+    display: block;
+    color: blue;
+}   
 }
