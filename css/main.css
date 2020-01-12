@@ -70,8 +70,8 @@ ol li {
   counter-increment: counter;
 }
 ol li::before {
-  content: counter(counter);
+  content: counter(counter) ".";
   font-size: 20px;
   font-weight: bold;
-  color: red;
+  color: blue;
 }
