@@ -86,7 +86,7 @@ ol li::before {
 }
 
 /* For desktop: */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
 .title {
     text-decoration: none;
     display: block;
