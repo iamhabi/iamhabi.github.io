@@ -75,3 +75,14 @@ ol li::before {
   font-weight: bold;
   color: blue;
 }
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+}
+
+/* For desktop: */
+@media only screen and (max-width: 768px) {
+.nav {
+    max-width: 1000px;
+}
+}
