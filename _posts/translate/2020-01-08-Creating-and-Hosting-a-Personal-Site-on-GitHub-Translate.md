@@ -5,7 +5,6 @@ date: 2020-01-08
 category: translate
 ---
 
-{% raw %}
 > Jekyll을 사용하여 개인 사이트와 블로그를 만들고 GitHub를 사용해 무료로 배포하기 위한 초보자 가이드
 
 > 번역 - <http://jmcglone.com/guides/github-pages/>
@@ -254,7 +253,7 @@ markdown: kramdown
 <!DOCTYPE html>    
 	<html>    
 		<head>    
-			<title>{{ page.title }}</title>    
+			<title>{% raw %}{{ page.title }}{% endraw %}</title>    
 			<!-- link to main stylesheet -->    
 			<link rel="stylesheet" type="text/css" href="/css/main.css">    
 		</head>    
@@ -269,7 +268,7 @@ markdown: kramdown
 			</nav>    
 			<div class="container">    
 			
-			{{ content }}    
+			{% raw %}{{ content }}{% endraw %}    
 			
 			</div><!-- /.container -->    
 			<footer>    
@@ -282,7 +281,7 @@ markdown: kramdown
 	</html>    
 ```
 
-코드에 있는 {{ page.title }}과 {{ content }}를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.    
+코드에 있는 {% raw %}{{ page.title }}{% endraw %}과 {% raw %}{{ content }}{% endraw %}를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.    
 
 10. 기본 레이아웃을 사용하기 위해 `index.html`을 업데이트해봅시다. 파일의 모든 코드를 다음과 같이 바꿔주세요.
 
@@ -297,7 +296,7 @@ title: Hank Quinlan, Horrible Cop
 </div><!-- /.blurb -->    
 ```
 
-파일의 상단에 있는 plain text를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할 겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋을 할 때마다 Jekyll은 `_layout/default.html`을 불러와 {{ content }} 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML 문서를 생성할 겁니다. 정말 대단하죠!    
+파일의 상단에 있는 plain text를 주의해서 봐주세요. Jekyll은 이것을 Front-matter라고 부릅니다. 여러분의 사이트에서 이것을 포함한 모든 파일은 Jekyll이 처리할 겁니다. 파일의 첫 부분에 `layout: default`를 작성한 파일을 커밋을 할 때마다 Jekyll은 `_layout/default.html`을 불러와 {% raw %}{{ content }}{% endraw %} 부분에 커밋된 파일의 내용을 삽입하여 마법같이 HTML 문서를 생성할 겁니다. 정말 대단하죠!    
 
 ## 블로그 설정하기
 
@@ -311,11 +310,11 @@ Jekyll을 베이스로 한 블로그는 우리가 방금 전까지 익숙해진 
 ---    
 layout: default    
 ---    
-<h1>{{ page.title }}</h1>    
-<p class="meta">{{ page.date | date_to_string }}</p>    
+<h1>{% raw %}{{ page.title }}{% endraw %}</h1>    
+<p class="meta">{% raw %}{{ page.date | date_to_string }}{% endraw %}</p>    
 
 <div class="post">    
-  {{ content }}    
+  {% raw %}{{ content }}{% endraw %}   
 </div>    
 ```
     
@@ -344,12 +343,12 @@ Well. Finally got around to putting this old website together. Neat thing about 
 layout: default    
 title: Hank Quinlan's Blog    
 ---    
-	<h1>{{ page.title }}</h1>    
+	<h1>{% raw %}{{ page.title }}{% endraw %}</h1>    
 	<ul class="posts">    
 
-	  {% for post in site.posts %}    
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>    
-	  {% endfor %}    
+	  {% raw %}{% for post in site.posts %}{% endraw %}    
+	    <li><span>{% raw %}{{ post.date | date_to_string }}{% endraw %}</span> » <a href="{% raw %}{{ post.url }}{% endraw %}" title="{% raw %}{{ post.title }}{% endraw %}">{% raw %}{{ post.title }}{% endraw %}</a></li>    
+	  {% raw %}{% endfor %}{% endraw %}    
 	</ul>    
 ```
 
@@ -384,22 +383,22 @@ layout: feed
 	<title>Hank Quinlan's Blog</title>    
 	<link href="http://hankquinlan.github.io/blog/atom.xml" rel="self"/>    
 	<link href="http://hankquinlan.github.io/blog"/>    
-	<updated>{{ site.time | date_to_xmlschema }}</updated>    
+	<updated>{% raw %}{{ site.time | date_to_xmlschema }}{% endraw %}</updated>    
 	<id>http://hankquinlan.github.io/blog</id>    
 	<author>    
 		<name>Hank Quinlan</name>    
 		<email>hankquinlanhub@gmail.com</email>    
 	</author>    
 
-	{% for post in site.posts %}    
+	{% raw %}{% for post in site.posts %}{% endraw %}    
 		<entry>    
-			<title>{{ post.title }}</title>    
-			<link href="http://hankquinlan.github.io{{ post.url }}"/>    
-			<updated>{{ post.date | date_to_xmlschema }}</updated>    
-			<id>http://hankquinlan.github.io{{ post.id }}</id>    
-			<content type="html">{{ post.content | xml_escape }}</content>    
+			<title>{% raw %}{{ post.title }}{% endraw %}</title>    
+			<link href="http://hankquinlan.github.io{% raw %}{{ post.url }}{% endraw %}"/>    
+			<updated>{% raw %}{{ post.date | date_to_xmlschema }}{% endraw %}</updated>    
+			<id>http://hankquinlan.github.io{% raw %}{{ post.id }}{% endraw %}</id>    
+			<content type="html">{% raw %}{{ post.content | xml_escape }}{% endraw %}</content>    
 		</entry>    
-	{% endfor %}    
+	{% raw %}{% endfor %}{% endraw %}    
 
 </feed>    
 ```
@@ -458,4 +457,3 @@ layout: feed
 * [출력 가능한 마크다운 정리 시트](http://packetlife.net/media/library/16/Markdown.pdf)
 * [마크다운 정리 시트](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 * [GitHub Flavored Markdown](https://help.github.com/categories/writing-on-github/)
-{% endraw %}
