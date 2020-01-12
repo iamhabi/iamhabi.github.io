@@ -11,7 +11,9 @@ title: iamhabi
                 {{ post.title }}
             </a>
         </h1>
-        <p>{{ post.date | date_to_string }}</p>
+        <p style="margin-top:1rem; margin-bottom: 1rem;">{{ post.date | date_to_string }}</p>
+        <p>{{ post.excerpt }}</p>
+
     </div>
     {% endfor %}
 </div>

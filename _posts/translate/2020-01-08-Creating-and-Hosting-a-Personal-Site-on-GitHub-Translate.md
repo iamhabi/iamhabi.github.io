@@ -63,12 +63,14 @@ GitHub Pages는 GitHub를 통해 무료로 호스팅 되는 공개 웹 페이지
 
 1. 저장소를 생성합시다. GitHub에 로그인을 하고 <https://github.com/new>에 들어가거나 New Repository 아이콘을 클릭하세요.    
     
- ![](http://jmcglone.com/img/guides/01-create-repo.png)    
+![](http://jmcglone.com/img/guides/01-create-repo.png)    
 
+{:start="2"}
 2. 저장소 이름을 `username.github.io`로 설정하세요. `username`은 여러분의 GitHub 사용자명(username)을 쓰세요. Public이 체크되어 있는지 확인하고 저장소 생성 시 README도 생성해주세요.    
     
  ![](http://jmcglone.com/img/guides/02-name-repo.png)    
 
+{:start="3"}
 3. 저장소 이름 옆에 있는 플러스 아이콘을 눌러 `index.html`파일을 생성하세요.     
     
 ![](http://jmcglone.com/img/guides/03-01-create-index-page.png)    
@@ -107,12 +109,14 @@ GitHub 편집기에 다음 코드를 작성해주세요.
 </html>    
 ```
 
+{:start="4"}
 4. `index.html`을 커밋해봅시다. 페이지의 하단에 변경에 대한 설명을 작성하기 위한 입력창과 파일을 커밋하기 위한 버튼이 있습니다.    
     
 ![](http://jmcglone.com/img/guides/04-01-commit-index-page.png)    
 
 축하합니다! 여러분은 방금 막 첫 GitHub 사이트를 만들었습니다. <https://username.github.io>에서 확인해보세요. 보통 사이트가 생성되기까지 5~10분 정도 걸리므로 그동안 HTML을 꾸며봅시다.
 
+{:start="5"}
 5. HTML을 꾸미기 위해 저장소로 돌아가서 `css/main.css`라는 파일을 생성해봅시다. 파일 이름 전에 붙이는 `css/`는 자동으로 `css`라는 하위 디렉토리를 생성합니다. 꽤 편리하죠.    
     
 ![](http://jmcglone.com/img/guides/05-01-create-css-file.png)    
@@ -168,7 +172,8 @@ ul.posts li {
 새로 만든 CSS 파일을 꼭 커밋하세요!
     
 ![](http://jmcglone.com/img/guides/06-commit-css-file.png)    
-      
+
+{:start="6"}      
 6. HTML 문서의 `<head>`부분에 CSS 파일을 적용해줍시다. `index.html` 파일로 돌아가서 "Edit" 버튼을 눌러주세요.        
     
 ![](http://jmcglone.com/img/guides/07-01-edit-index-page.png)    
@@ -226,6 +231,7 @@ Jekyll은 템플릿에 의존하기 때문에 여러분의 웹사이트를 더 �
 
 여러분의 사이트에서 Jekyll을 사용하기 위해 [Jekyll 파일 구조](http://jekyllrb.com/docs/structure/)를 따라야 합니다. 이 구조에 대해 배우기 위해 우리의 GitHub 저장소에 이 구조를 구축할 겁니다.    
 
+{:start="7"}
 7. `.gitignore` 파일을 생성해주세요. 이 파일은 여러분이 커밋을 할 때마다 Jekyll이 자동으로 생성하는 `_site` 파일을 무시하도록 Git에게 말해줍니다. 이 디렉터리와 안에 있는 모든 파일은 여러분이 커밋을 할 때마다 쓰이므로, 이 디렉터리가 버전 관리되는 것을 원하지 않습니다.    
 
 ![](http://jmcglone.com/img/guides/08-01-create-gitignore.png)    
@@ -235,7 +241,8 @@ Jekyll은 템플릿에 의존하기 때문에 여러분의 웹사이트를 더 �
 ```
 _site/
 ```
-    
+
+{:start="8"}    
 8. Jekyll에게 여러분의 프로젝트에 대한 몇가지 기본사항을 알려주는 `_config.yml` 파일을 만들어봅시다. 이 예제에서 우리는 Jekyll에게 우리 사이트의 이름과 우리가 사용할 마크다운의 버전을 알려줍니다.
 
 ```
@@ -245,6 +252,7 @@ markdown: kramdown
 
 *이 부분에서 여러분이 GitHub 웹 인터페이스를 사용하여 파일을 생성하였다고 믿고, 위 예시에 관한 스크린샷을 첨부하지 않겠습니다*    
 
+{:start="9"}
 9. `_layouts` 디렉터리를 생성하고, 디렉터리 안에 `default.html`이라는 이름의 파일을 생성해주세요. (새로운 파일을 생성하면서 디렉터리도 생성할 수 있습니다. 만약 잊어버렸다면 [`main.css` 단계]()를 다시 한번 확인해 주세요.)
 
 이 파일은 `<head>`와 `<footer>`같은 반복되는 요소들을 포함하는 메인 레이아웃입니다. 이제 우리는 더 이상 새로 페이지를 만들 때마다 markup을 반복하여 작성하지 않아도 됩니다. 사이트의 관리가 더욱 쉬워졌죠. 그럼 다음 코드를 `index.html`에서 `default.html`로 옮겨봅시다.
@@ -283,6 +291,7 @@ markdown: kramdown
 
 코드에 있는 `{% raw %}{{ page.title }}{% endraw %}`과 `{% raw %}{{ content }}{% endraw %}`를 잘 봐주세요. Jekyll에서 liquid tags라고 불리는 것들입니다. 이것들은 웹 페이지에 내용을 삽입하기 위해 사용됩니다. 자세한 건 잠시 후에 살펴보도록 합시다.    
 
+{:start="10"}
 10. 기본 레이아웃을 사용하기 위해 `index.html`을 업데이트해봅시다. 파일의 모든 코드를 다음과 같이 바꿔주세요.
 
 ```
@@ -304,6 +313,7 @@ Jekyll을 베이스로 한 블로그는 우리가 방금 전까지 익숙해진 
 
 블로그의 포스트를 작성할 `post.html`라는 이름의 새로운 레이아웃을 만들고 각각의 포스트를 저장할 `_posts/`라는 폴더도 만들어봅시다.    
 
+{:start="11"}
 11. 레이아웃을 생성하는 것으로 시작해봅시다. `_layouts`폴더에 `post.html`을 생성해주세요. 포스트 레이아웃이 기본 레이아웃을 사용하는 것에 주의하시고, 포스트의 제목과 날짜를 표시하기 위해 몇 가지 태그를 추가해줍시다.
 
 ```
@@ -317,7 +327,8 @@ layout: default
   {% raw %}{{ content }}{% endraw %}   
 </div>    
 ```
-    
+
+{:start="12"}    
 12. 블로그의 포스트를 저장할 `_posts/` 디렉터리를 만들어주세요. 폴더 안에 첫 포스트를 작성해봅시다. Jekyll은 파일의 이름을 짓는 것에 매우 엄격하므로 주의해주세요. 파일의 이름은 꼭 `YYYY-MM-DD-title-of-my-post.md`같은 형식이어야합니다. 이 파일 이름은 블로그 포스트에 사용될 고유주소로 바뀝니다. 그러니 이 예제에서는, `2014-04-30-hank-quinnlan-site-launched.md`라고 지은 파일을 생성합니다.
 
 ```
@@ -336,6 +347,7 @@ Well. Finally got around to putting this old website together. Neat thing about 
 
 모든 것이 순조롭지만 독자는 여러분의 포스트의 URL을 정확히 모를 겁니다. 그래서 다음으로 우리는 각 포스트의 제목과 링크를 리스트로 보여주는 페이지를 만들 겁니다. 여러분은 여러분의 메인 페이지에 이 리스트를 만들 수도 있고, 여러분의 포스트 리스트를 담은 페이지를 따로 만들 수도 있습니다. 우리는 후자로 만들 것입니다.    
 
+{:start="13"}
 13. `blog` 디렉터리를 만들고 폴더 안에 `index.html` 파일도 만들어주세요. 포스트 리스트를 보여주려면, 우리는 반복문을 사용하여 포스트가 정렬되지 않은 리스트를 만들 겁니다.
 
 ```
@@ -361,6 +373,7 @@ title: Hank Quinlan's Blog
 
 여러분은 아마 블로그 포스트의 URL이 블로그 디렉터리를 포함하지 않는다는 것을 알았을 겁니다. Jekyll을 사용해 우리는 8단계에서 생성한 `_config.yml`를 약간 수정해서 고유주소의 구조를 제어할 수 있게 됩니다. 블로그 디렉터리를 포함하게 하기 위해 고유주소의 구조를 바꿔봅시다.    
 
+{:start="14"}
 14. `_config.yml` 파일을 수정해봅시다. 파일 끝부분에 다음 코드를 추가해주세요.
 
 ```
@@ -371,6 +384,7 @@ permalink: /blog/:year/:month/:day/:title
 
 블로그에 RSS 피드를 설정하는 것도 매우 간단합니다. 새로운 포스트를 작성할 때마다, 이것은 RSS 파일에 추가될 겁니다.    
 
+{:start="15"}
 15.  `blog/` 디렉터리 안에 `atom.xml`이라는 새로운 파일을 만들고 다음 코드를 추가해주세요:
 
 ```
@@ -410,8 +424,10 @@ layout: feed
 
 # 마무리    
 
+{:start="16"}
 16. 거의 다 끝났습니다! `about/index.html`과 `cv/index.html`을 생성하고 커밋하는 것을 잊지 마세요. 이제 여러분이 어느 정도 요령을 터득한 거 같으니, 저는 이제 물러서서 여러분 스스로가 이 가이드를 끝낼 수 있도록 할 겁니다.    
 
+{:start="17"}
 17. 더욱 나아가기 전에, [Git 설치](https://help.github.com/articles/set-up-git)와 [Jekyll](http://jekyllrb.com/docs/installation/)을 읽을 시간을 가지세요. 이 튜토리얼은 웹 브라우저에서 Git에 대한 모든 것을 담고 있지만 실제론 중간지점에 불과합니다. **여러분의 GitHub 저장소에 이미지나 PDF 파일을 올리기 위해서는 이것을 읽어야 할겁니다.** GitHub 튜토리얼과 데스크탑 앱은 로컬 설정을 쉽게 해줍니다. 여러분은 이제 Git과 GitHub의 기본 지식에 대해 많이 알게 되었으므로 이것을 할 수 있어야 합니다. 어서 해보세요!    
 
 # 다음 단계
