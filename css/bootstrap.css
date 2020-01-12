@@ -101,7 +101,15 @@ address {
   line-height: inherit;
 }
 
-ol,
+ol {
+  font-size: 20px; 
+  height: 25px;
+  width: 25px;
+  background-color: aqua;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 ul,
 dl {
   margin-top: 0;
