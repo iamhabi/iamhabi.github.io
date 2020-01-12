@@ -5,6 +5,7 @@ date: 2020-01-08
 category: translate
 ---
 
+{% raw %}
 > Jekyll을 사용하여 개인 사이트와 블로그를 만들고 GitHub를 사용해 무료로 배포하기 위한 초보자 가이드
 
 > 번역 - <http://jmcglone.com/guides/github-pages/>
@@ -180,8 +181,8 @@ ul.posts li {
 <html>    
 	<head>    
 		<title>Hank Quinlan, Horrible Cop</title>    
-		`**`<!-- link to main stylesheet -->`**`  
-		**`<link rel="stylesheet" type="text/css" href="/css/main.css">`**  
+		**<!-- link to main stylesheet -->** 
+		**<link rel="stylesheet" type="text/css" href="/css/main.css">**  
 	</head>    
 	<body>    
 		<nav>    
@@ -457,3 +458,4 @@ layout: feed
 * [출력 가능한 마크다운 정리 시트](http://packetlife.net/media/library/16/Markdown.pdf)
 * [마크다운 정리 시트](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 * [GitHub Flavored Markdown](https://help.github.com/categories/writing-on-github/)
+{% endraw %}
