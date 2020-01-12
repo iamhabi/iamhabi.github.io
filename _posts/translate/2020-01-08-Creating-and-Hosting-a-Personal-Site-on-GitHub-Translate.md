@@ -61,12 +61,14 @@ GitHub Pages는 GitHub를 통해 무료로 호스팅 되는 공개 웹 페이지
 
 만약 이런 개념의 일부가 아직 이해되지 않아도 걱정하지 마세요. 이것을 배우는 가장 좋은 방법은 직접 해보는 것이므로 더 이상 시간을 낭비하지 말고 시작해봅시다.
 
-1. 저장소를 생성합시다. GitHub에 로그인을 하고 <https://github.com/new>에 들어가거나 New Repository 아이콘을 클릭하세요.    
+1. 
+저장소를 생성합시다. GitHub에 로그인을 하고 <https://github.com/new>에 들어가거나 New Repository 아이콘을 클릭하세요.    
     
 ![](http://jmcglone.com/img/guides/01-create-repo.png)    
 
 {:start="2"}
-2. 저장소 이름을 `username.github.io`로 설정하세요. `username`은 여러분의 GitHub 사용자명(username)을 쓰세요. Public이 체크되어 있는지 확인하고 저장소 생성 시 README도 생성해주세요.    
+2. 
+저장소 이름을 `username.github.io`로 설정하세요. `username`은 여러분의 GitHub 사용자명(username)을 쓰세요. Public이 체크되어 있는지 확인하고 저장소 생성 시 README도 생성해주세요.    
     
  ![](http://jmcglone.com/img/guides/02-name-repo.png)    
 
