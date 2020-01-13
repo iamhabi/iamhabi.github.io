@@ -74,7 +74,7 @@ ol li::before {
 }
 
 .nav {
-    border-top: 7px;
+    margin-top: 7px;
     font-size: 23px;
     text-decoration: none;
 }
