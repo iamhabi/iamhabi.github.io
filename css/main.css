@@ -1,28 +1,5 @@
 body { margin: 0 auto; }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-nav li { float: left; }
-
-nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav li a:hover:not(.active) { background-color: #111; color: white; }
-
 /*a {
     color: blue;
     text-decoration: none;
@@ -85,7 +62,6 @@ ol li::before {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
 }
 
 .topnav .icon {
