@@ -69,12 +69,12 @@ ol li::before {
 }
 
 .home {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .nav { 
-    font-size: 20px;
+    font-size: 17px;
     text-decoration: none;
 }
 
