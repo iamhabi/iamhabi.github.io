@@ -118,6 +118,7 @@ ol li::before {
     }
 
     .title {
+        max-width: 100%;
         text-decoration: none;
         display: block;
         color: black;
