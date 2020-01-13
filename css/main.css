@@ -77,6 +77,8 @@ ol li::before {
     overflow: hidden;
     margin: auto;
     text-decoration: none;
+    max-width: 1600px;
+    margin: auto; 
 }
 
 .topnav a {
@@ -90,6 +92,11 @@ ol li::before {
 
 .topnav .icon {
     display: none;
+}
+
+.home {
+    font-size: 27px;
+    font-weight: bold;
 }
 
 /* For desktop: */

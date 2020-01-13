@@ -155,6 +155,7 @@ sup {
 
 a {
   /*color: blue;*/
+  font-size: 20px;
   text-decoration: none !important;
   background-color: transparent;
 }
