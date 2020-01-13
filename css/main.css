@@ -73,9 +73,8 @@ ol li::before {
     font-weight: bold;
 }
 
-.nav { 
-    float: right;
-    font-size: 17px;
+.nav {
+    font-size: 23px;
     text-decoration: none;
 }
 
