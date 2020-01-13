@@ -58,7 +58,7 @@ div.gallery {
 
 .post { max-width: 1000px; margin: auto; }
 
-.topnav { max-width: 1600px; margin: auto; text-decoration: none; }
+.nav { max-width: 1600px; margin: auto; text-decoration: none; }
 
 ol {
   list-style: none;
@@ -91,31 +91,5 @@ ol li::before {
         text-decoration: none;
         display: block;
         color: red;
-    }
-
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    .topnav.responsive {float: none;}
-    .topnav.responsive {position: relative;}
-    .topnav.responsive {
-        display: block;
-        width: 100%;
-        text-align: left;
     }
 }
