@@ -21,7 +21,7 @@ nav li a {
     text-decoration: none;
 }
 
-nav li a:hover:not(.active) { background-color: #111; }
+nav li a:hover:not(.active) { background-color: #111; color: white; }
 
 /*a {
     color: blue;
@@ -78,17 +78,44 @@ ol li::before {
 
 /* For desktop: */
 @media only screen and (max-width: 1000px) {
-.title {
-    text-decoration: none;
-    display: block;
-    color: blue;
-}   
+    .title {
+        text-decoration: none;
+        display: block;
+        color: blue;
+    }   
 }
+
 /* For tablets: */
-@media only screen and (max-width: 500px) {
-.title {
-    text-decoration: none;
-    display: block;
-    color: red;
-}   
+@media only screen and (max-width: 600px) {
+    .title {
+        text-decoration: none;
+        display: block;
+        color: red;
+    }
+
+    nav a:not(:first-child) {
+        display: none;
+    }
+    nav a.icon {
+        float: right;
+        display: block;
+    }
+    nav.responsive {position: relative;}
+    nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    nav.responsive {float: none;}
+    nav.responsive {position: relative;}
+    nav.responsive {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
 }
