@@ -33,6 +33,8 @@ div.gallery {
 
 .post { max-width: 1000px; margin: auto; }
 
+.post_excerpt { display: inline; }
+
 .date { margin-top:1rem; margin-bottom: 1rem; font-size: 20px; }
 
 ol {
@@ -126,6 +128,8 @@ ol li::before {
     }
 
     .post { max-width: 500px; margin: auto; }
+
+    .post_excerpt { display: none; }
 
     .content { padding:10px; margin-top:15px; }
 }
