@@ -84,7 +84,7 @@ ol li::before {
 }
 
 /* For desktop: */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     .topnav a:not(:first-child) {
         display: none;
     }
