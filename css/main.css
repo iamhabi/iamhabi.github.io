@@ -1,8 +1,6 @@
 body { margin: 0 auto; }
 
-.topnav { max-width: 1600px; margin: auto; text-decoration: none; }
-
-.topnav ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -13,9 +11,9 @@ body { margin: 0 auto; }
     width: 100%;
 }
 
-.topnav li { float: left; }
+nav li { float: left; }
 
-.topnav li a {
+nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -23,7 +21,7 @@ body { margin: 0 auto; }
     text-decoration: none;
 }
 
-.topnav li a:hover:not(.active) { background-color: #111; color: white; }
+nav li a:hover:not(.active) { background-color: #111; color: white; }
 
 /*a {
     color: blue;
@@ -60,6 +58,8 @@ div.gallery {
 
 .post { max-width: 1000px; margin: auto; }
 
+.topnav { max-width: 1600px; margin: auto; text-decoration: none; }
+
 ol {
   list-style: none;
 }
@@ -90,7 +90,7 @@ ol li::before {
     .title {
         text-decoration: none;
         display: block;
-        color: green;
+        color: red;
     }
 
     .topnav a:not(:first-child) {
