@@ -130,7 +130,7 @@ ol li::before {
     .content { padding:10px; margin-top:15px; }
 
     img { 
-        max-width: 440px;
+        max-width: 400px;
         display: block;
         margin: 0px auto;
     }
