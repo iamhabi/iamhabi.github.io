@@ -109,20 +109,11 @@ ol li::before {
 
 /* For desktop: */
 @media only screen and (max-width: 1000px) {
-    .title {
-        text-decoration: none;
-        display: block;
-        color: blue;
-    }   
+    
 }
 
 /* For tablets: */
 @media only screen and (max-width: 600px) {
-    .title {
-        text-decoration: none;
-        display: block;
-        color: red;
-    }
     .topnav a:not(:first-child) {
         display: none;
     }
