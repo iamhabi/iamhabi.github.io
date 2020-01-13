@@ -78,7 +78,6 @@ ol li::before {
 
 .topnav {
     overflow: hidden;
-    background-color: gray;
     margin: auto;
     text-decoration: none;
 }
@@ -94,7 +93,7 @@ ol li::before {
 }
 
 .active {
-    background-color: #444;
+    background-color: #555;
     color: white;
 }
 
@@ -103,7 +102,6 @@ ol li::before {
 }
 
 .topnav a:hover {
-    background-color: #111;
     color: white;
 }
 
