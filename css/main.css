@@ -52,8 +52,6 @@ div.gallery {
     color: black;
 }
 
-.active { background-color: #4CAF50; }
-
 .content { max-width: 600px; margin: auto; }
 
 .post { max-width: 1000px; margin: auto; }
@@ -73,7 +71,6 @@ ol li::before {
   content: counter(counter) ".";
   font-size: 20px;
   font-weight: bold;
-  color: blue;
 }
 
 .topnav {
@@ -91,16 +88,8 @@ ol li::before {
     font-size: 17px;
 }
 
-.active {
-    color: blue;
-}
-
 .topnav .icon {
     display: none;
-}
-
-.topnav a:hover {
-    color: white;
 }
 
 /* For desktop: */
