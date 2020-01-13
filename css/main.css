@@ -122,9 +122,7 @@ ol li::before {
         color: black;
     }
 
-    .post { max-width: 500px; margin: auto; }
-
-    .post_excerpt { display: none; }
+    .post_excerpt { color: red; }
 
     .content { padding:10px; margin-top:15px; }
 }
