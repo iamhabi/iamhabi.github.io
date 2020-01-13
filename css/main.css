@@ -74,6 +74,7 @@ ol li::before {
 }
 
 .nav {
+    text-align: end;
     font-size: 23px;
     text-decoration: none;
 }
