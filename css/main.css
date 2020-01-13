@@ -36,7 +36,7 @@ div.gallery {
     margin: auto;
 }
 
-.post_excerpt { max-width: 1000; }
+.post_excerpt { margin: auto; }
 
 .date { margin-top:1rem; margin-bottom: 1rem; font-size: 20px; }
 
@@ -125,7 +125,10 @@ ol li::before {
         color: black;
     }
 
-    .post_excerpt { color: red; }
+    .post_excerpt { 
+        color: red;
+        margin: auto;
+     }
 
     .content { padding:10px; margin-top:15px; }
 
@@ -134,4 +137,6 @@ ol li::before {
         display: block;
         margin: 0px auto;
     }
+
+    .date { margin-top:1rem; margin-bottom: 1rem; font-size: 10px; }
 }
