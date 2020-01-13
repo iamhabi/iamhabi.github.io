@@ -29,7 +29,7 @@ div.gallery {
     color: black;
 }
 
-.content { max-width: 600px; margin: auto; }
+.content { padding:20px; margin-top:30px; }
 
 .post { max-width: 1000px; margin: auto; }
 
@@ -113,8 +113,19 @@ ol li::before {
         width: 100%;
         text-align: left;
     }
-    
-    .content { margin: auto; }
 
-    .post { margin: auto; }
+    .home {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .title {
+        text-decoration: none;
+        display: block;
+        color: black;
+    }
+
+    .post { max-width: 500px; margin: auto; }
+
+    .content { padding:10px; margin-top:15px; }
 }
