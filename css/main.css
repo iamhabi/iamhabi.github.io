@@ -57,7 +57,7 @@ ol li::before {
 }
 
 .topnav a {
-    float: right;
+    float: left;
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -69,7 +69,6 @@ ol li::before {
 }
 
 .home {
-    float: left;
     font-size: 30px;
     font-weight: bold;
 }
