@@ -118,7 +118,6 @@ ol li::before {
     }
 
     .title {
-        max-width: 100%;
         text-decoration: none;
         display: block;
         color: black;
@@ -131,7 +130,7 @@ ol li::before {
     .content { padding:10px; margin-top:15px; }
 
     img { 
-        max-width: 85%;
+        max-width: 95%;
         display: block;
         margin: 0px auto;
     }
