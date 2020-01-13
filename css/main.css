@@ -90,7 +90,7 @@ ol li::before {
     .title {
         text-decoration: none;
         display: block;
-        color: red;
+        color: green;
     }
 
     nav a:not(:first-child) {
