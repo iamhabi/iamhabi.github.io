@@ -2,14 +2,16 @@
 layout: default
 ---
 
-<div class="post_title">
-    <h1 style="text-align: center; margin-bottom: 1rem;">{{ page.title }}</h1>
-</div>
+<div class="col-6 col-s-9">
+    <div class="post_title">
+        <h1 style="text-align: center; margin-bottom: 1rem;">{{ page.title }}</h1>
+    </div>
 
-<div class="post">
-    <p class="meta" style="text-align: right;" class="date">{{ page.date | date_to_string }}</p>
+    <div class="post">
+        <p class="meta" style="text-align: right;" class="date">{{ page.date | date_to_string }}</p>
 
-    <p>
-        {{ content }}
-    </p>
+        <p>
+            {{ content }}
+        </p>
+    </div>
 </div>
