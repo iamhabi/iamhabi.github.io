@@ -1,6 +1,6 @@
 body { margin: 0 auto; }
 
-/* nav ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ nav li a {
     text-decoration: none;
 }
 
-nav li a:hover:not(.active) { background-color: #111; color: white; } */
+nav li a:hover:not(.active) { background-color: #111; color: white; }
 
 /*a {
     color: blue;
@@ -30,8 +30,8 @@ nav li a:hover:not(.active) { background-color: #111; color: white; } */
 
 img { max-width: 600px; }
 
-/* ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
-ul.posts li { list-style: none; } */
+ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
+ul.posts li { list-style: none; }
 
 div.gallery {
     width: 1000px;
@@ -75,15 +75,43 @@ ol li::before {
   font-weight: bold;
   color: blue;
 }
+.topnav {
+    overflow: hidden;
+    background-color: gray;
+}
 
-/* For desktop:
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.active {
+    background-color: #333;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.topnav a:hover {
+    background-color: #111;
+    color: white;
+}
+
+/* For desktop: */
 @media only screen and (max-width: 1000px) {
     .title {
         text-decoration: none;
         display: block;
         color: blue;
     }   
-} */
+}
 
 /* For tablets: */
 @media only screen and (max-width: 600px) {
@@ -91,5 +119,30 @@ ol li::before {
         text-decoration: none;
         display: block;
         color: red;
+    }
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive {float: none;}
+    .topnav.responsive {position: relative;}
+    .topnav.responsive {
+        display: block;
+        width: 100%;
+        text-align: left;
     }
 }
