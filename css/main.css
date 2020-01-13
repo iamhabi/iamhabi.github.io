@@ -93,27 +93,27 @@ ol li::before {
         color: green;
     }
 
-    nav a:not(:first-child) {
+    .nav a:not(:first-child) {
         display: none;
     }
-    nav a.icon {
+    .nav a.icon {
         float: right;
         display: block;
     }
-    nav.responsive {position: relative;}
-    nav.responsive .icon {
+    .nav.responsive {position: relative;}
+    .nav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
-    nav.responsive a {
+    .nav.responsive a {
         float: none;
         display: block;
         text-align: left;
     }
-    nav.responsive {float: none;}
-    nav.responsive {position: relative;}
-    nav.responsive {
+    .nav.responsive {float: none;}
+    .nav.responsive {position: relative;}
+    .nav.responsive {
         display: block;
         width: 100%;
         text-align: left;
