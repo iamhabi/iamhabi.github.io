@@ -75,10 +75,10 @@ ol li::before {
   font-weight: bold;
   color: blue;
 }
+
 .topnav {
     overflow: hidden;
     background-color: gray;
-    max-width: 1600px;
     margin: auto;
     text-decoration: none;
 }
@@ -109,7 +109,7 @@ ol li::before {
 
 /* For desktop: */
 @media only screen and (max-width: 1000px) {
-    
+
 }
 
 /* For tablets: */
