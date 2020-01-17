@@ -4,17 +4,19 @@ title: Project
 ---
 
 <div class="post">
-        {% for post in site.posts %}
-            {% if post.category == "project" %}
-            <div class="gallery">
-                <h1>
-                    <a href="{{ post.url }}" title="{{ post.title }}" class="title">
-                        {{ post.title }}
-                    </a>
-                </h1>
-                <p style="margin-top:1rem; margin-bottom: 1rem; font-size: 20px;">{{ post.date | date_to_string }}</p>
+    {% for post in site.posts %}
+        {% if post.category == "project" %}
+        <div class="gallery">
+            <h2>
+                <a href="{{ post.url }}" title="{{ post.title }}" class="title">
+                    {{ post.title }}
+                </a>
+            </h2>
+            <p class="date">{{ post.date | date_to_string }}</p>
+            <div class="post_excerpt">
                 <p>{{ post.excerpt }}</p>
             </div>
-            {% endif %}
-        {% endfor %}
+        </div>
+        {% endif %}
+    {% endfor %}
 </div>
