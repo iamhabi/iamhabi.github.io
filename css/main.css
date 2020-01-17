@@ -124,7 +124,7 @@ ol li::before {
     }
 
     .post { 
-        max-width: 700px;
+        max-width: 95%;
         margin: auto;
     }
 
@@ -139,7 +139,7 @@ ol li::before {
     }
 
     .gallery {
-        width: 700px;
+        width: 95%;
         margin-top: 20px;
     }
 
