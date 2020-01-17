@@ -10,7 +10,7 @@ img { max-width: 600px; }
 ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
 ul.posts li { list-style: none; }
 
-div.gallery {
+.gallery {
     width: 1000px;
     margin-top: 30px;
 }
@@ -123,9 +123,11 @@ ol li::before {
         color: black;
     }
 
-    .post_excerpt { 
-        display: none;
-     }
+    .post { 
+        max-width: 760px;
+    }
+
+    .post_excerpt { display: none }
 
     .content { padding:10px; margin-top:15px; }
 
@@ -133,6 +135,11 @@ ol li::before {
         margin-top: 4px;
         font-size: 17px;
         text-decoration: none;
+    }
+
+    .gallery {
+        width: 760px;
+        margin-top: 20px;
     }
 
     img { 
