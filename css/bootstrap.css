@@ -542,6 +542,7 @@ pre code {
   padding: 20px;
   white-space: pre-wrap;
   background-color: #eee;
+  margin: auto;
 }
 
 .pre-scrollable {
