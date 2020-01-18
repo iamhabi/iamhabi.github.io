@@ -532,6 +532,9 @@ pre {
   display: block;
   font-size: 87.5%;
   color: #212529;
+  white-space:pre-wrap;
+  word-wrap:break-word;
+  overflow: auto;
 }
 
 pre code {
@@ -542,8 +545,9 @@ pre code {
   padding: 20px;
   white-space: pre-wrap;
   background-color: #eee;
-  margin: auto;
 }
+
+pre, code, kbd { -moz-tab-size:4; -o-tab-size:4; tab-size:4; }
 
 .pre-scrollable {
   max-height: 340px;
