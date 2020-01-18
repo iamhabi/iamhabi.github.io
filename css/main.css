@@ -147,4 +147,6 @@ ol li::before {
         display: block;
         margin: 0px auto;
     }
+
+    ol, li { margin-left: 0; }
 }
