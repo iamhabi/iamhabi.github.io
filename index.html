@@ -5,18 +5,20 @@ title: iamhabi
 
 <div class="post">
     {% for post in site.posts %}
-    <div class="gallery">
-        <h2>
-            <a href="{{ post.url }}" title="{{ post.title }}" class="title">
-                {{ post.title }}
-            </a>
-        </h2>
-        <div class="date">
-            <p class="date">{{ post.date | date_to_string }}</p>
+        {% if post.category != "introduction" %}
+        <div class="gallery">
+            <h2>
+                <a href="{{ post.url }}" title="{{ post.title }}" class="title">
+                    {{ post.title }}
+                </a>
+            </h2>
+            <div class="date">
+                <p class="date">{{ post.date | date_to_string }}</p>
+            </div>
+            <div class="post_excerpt">
+                <p>{{ post.excerpt }}</p>
+            </div>
         </div>
-        <div class="post_excerpt">
-            <p>{{ post.excerpt }}</p>
-        </div>
-    </div>
+        {% endif %}
     {% endfor %}
 </div>
