@@ -4,7 +4,9 @@ title: About Me
 ---
 
 <div class="post">
-    <div style="text-align: left;">
-        <h1>My Introduction</h1>
-    </div>
+    {% for post in site.posts %}
+        {% if post.category == "introduction" %}
+            {{ content }}
+        {% endif %}
+    {% endfor %}
 </div>
