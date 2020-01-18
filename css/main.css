@@ -148,5 +148,6 @@ ol li::before {
         margin: 0px auto;
     }
 
-    ol, li { margin-left: 0; }
+    ol, ol li { margin-left: 0; padding-left: 0; }
+    ol { margin-left: 1.3em; }
 }
