@@ -9,6 +9,6 @@ category: project
 
 이런 종류의 게임을 지칭하는 말이 있던데, 기억이 나지 않아서 Dodge Game이라고 이름을 정했다.
 
-Unity, C#
+**Unity, C#**
 
-<https://github.com/iamhabi/Dodge-Game>
+**<https://github.com/iamhabi/Dodge-Game>**

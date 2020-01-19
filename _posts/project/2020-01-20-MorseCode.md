@@ -8,9 +8,9 @@ category: project
 영어를 입력하면 모스 부호를, 모스 부호를 입력하면 영어를 출력하는 간단한 프로그램이다.
 
 ### C 언어
-<https://github.com/iamhabi/Morse-Code>
+**<https://github.com/iamhabi/Morse-Code>**
 
 ### Java
-<https://github.com/iamhabi/Morse-Code-Java>
+**<https://github.com/iamhabi/Morse-Code-Java>**
 
 C 언어 버전에서 GUI를 추가해서 Java 버전으로 새롭게 만들어봤다.
