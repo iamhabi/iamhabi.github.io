@@ -13,4 +13,4 @@ C 언어로 작성한 뱀 게임이다.
 
 가끔 뱀의 몸통 위에 사과가 생성되는 일이 있다.
 
-https://github.com/iamhabi/Snake/
+<https://github.com/iamhabi/Snake/>
