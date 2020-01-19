@@ -85,11 +85,13 @@ ol li::before {
 }
 
 .home {
+    color: black;
     font-size: 30px;
     font-weight: bold;
 }
 
 .nav {
+    color: black;
     margin-top: 7px;
     font-size: 23px;
     text-decoration: none;
