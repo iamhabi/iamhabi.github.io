@@ -158,6 +158,7 @@ a {
   text-decoration: none !important;
   background-color: transparent;
   overflow: hidden;
+  margin: auto;
 }
 
 a:hover {
