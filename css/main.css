@@ -166,4 +166,6 @@ ol li::before {
     }
 
     ol, ol li { margin-left: 0; padding-left: 0; }
+
+    a { max-width: 95%; }
 }
