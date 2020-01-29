@@ -97,7 +97,7 @@ ol li::before {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 724px) {
+@media only screen and (max-width: 600px) {
     .topnav a:not(:first-child) {
         display: none;
     }
