@@ -13,7 +13,7 @@ title: iamhabi
                 </a>
             </h2>
             <div class="date">
-                <p class="date">{{ post.date | date_to_string }}</p>
+                <p class="date">{{ post.date | date_to_string | post.category }}</p>
             </div>
             <div class="post_excerpt">
                 <p>{{ post.excerpt }}</p>
