@@ -31,6 +31,8 @@ ul.posts li { list-style: none; }
 
 .content { padding:20px; margin-top:30px; }
 
+video { max-width: 600px; }
+
 .post { 
     max-width: 1000px;
     margin: auto;
@@ -166,6 +168,8 @@ ol li::before {
         display: block;
         margin: 0px auto;
     }
+
+    video { max-width: 95%; }
 
     ol, ol li { margin-left: 0; padding-left: 0; }
 }
