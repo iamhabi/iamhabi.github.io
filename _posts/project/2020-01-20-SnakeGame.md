@@ -15,7 +15,7 @@ category: project
 
 **<https://github.com/iamhabi/Snake/>**
 
-<figure class="video_container">
+<figure class="img">
   <video controls="true" allowfullscreen="true">
     <source src="/media/Snake_200213.mp4" type="video/mp4">
   </video>
