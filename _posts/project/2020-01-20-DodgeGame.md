@@ -15,6 +15,6 @@ category: project
 
 <figure class="video_container">
   <video controls="true" allowfullscreen="true">
-    <source src="/media/DodgeGame_200213.mp4" type="video/mp4">
+    <source src="/media/DodgeGame/DodgeGame_200213.mp4" type="video/mp4">
   </video>
 </figure>

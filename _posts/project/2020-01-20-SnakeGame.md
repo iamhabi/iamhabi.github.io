@@ -17,7 +17,7 @@ category: project
 
 <figure class="video_container">
   <video controls="true" allowfullscreen="true">
-    <source src="/media/Snake_200213.mp4" type="video/mp4">
+    <source src="/media/Snake/Snake_200213.mp4" type="video/mp4">
   </video>
 </figure>
 
