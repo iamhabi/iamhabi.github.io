@@ -5,20 +5,18 @@ date: 2020-09-07
 category: project
 ---
 
-# Maybe Board
-
 개인적으로 DailyBoard나 DashBoard 같은 것이 필요해서 제작했다.  
 
 "MaybeBoard"인 이유는 이것도 '아마' 일종의 DashBoard겠지라고 생각해 MaybeBoard라고 이름을 붙였다.
 
-**https://github.com/iamhabi/MaybeBoard**
+**<https://github.com/iamhabi/MaybeBoard>**
 
-![](./media/MaybeBoard/MaybeBoard.png)
+![](/media/MaybeBoard/MaybeBoard.png)
 
 
 ## Clock
 
-https://www.w3schools.com/graphics/canvas_clock_start.asp
+<https://www.w3schools.com/graphics/canvas_clock_start.asp>
 
 w3schoools의 소스를 슥 해와서 내 입맛대로 고쳤다.
 
@@ -26,8 +24,8 @@ setInterval() 함수를 사용하면 새로고침 할 때 시계가 늦게 로�
 
 ## Weather
 
-https://openweathermap.org/  
-https://github.com/CodeExplainedRepo/Weather-App-JavaScript
+<https://openweathermap.org/>  
+<https://github.com/CodeExplainedRepo/Weather-App-JavaScript>
 
 날씨 API는 openweathermap이라는 곳을 사용했다.  
 json과 api를 사용해보는 것은 이번이 처음이라서 많이 헤맸다.
@@ -37,11 +35,11 @@ json과 api를 사용해보는 것은 이번이 처음이라서 많이 헤맸다
 
 ## Calendar
 
-https://developers.google.com/calendar
+<https://developers.google.com/calendar>
 
 유일하게 남의 소스를 슥 해오지 않고 직접 짠 달력이다.
 
-![](./media/MaybeBoard/calendar.png)
+![](/media/MaybeBoard/calendar.png)
 
 사진에서 볼 수 있듯이 오늘 날짜는 skyblue 색상으로 background를 칠했다.  
 
