@@ -8,25 +8,23 @@
     <body>
    
         <div class="topnav" id="myTopnav">
-            <a href="/" class="home">I AM HABI</a>
+            <a href="/" class="home">HABI</a>
             <a href="/translate/" class="nav">Translate</a>
             <a href="/project/" class="nav">Project</a>
             <a href="/book" class="nav">Book</a>
             <a href="/about" class="nav">About</a>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="javascript:void(0);" style="font-size:15px; color:black" class="icon" onclick="responsiveNav()">&#9776;</a>
         </div>
 
         <div>
-            <div class="post">
-                    {{ content }}
-            </div>
+            {{ content }}
         </div>
 
         <hr>
         <p style="text-align: center; color: #c8c8c8;">Copyright &copy; iamhabi 2020</p>
         
         <script>
-            function myFunction() {
+            function responsiveNav() {
               var x = document.getElementById("myTopnav");
               if (x.className === "topnav") {
                 x.className += " responsive";
