@@ -74,11 +74,6 @@ body { margin: 0 auto; }
     margin: auto
 }
 
-p {
-    font-size: 20px;
-    line-height: 150%;
-}
-
 .contact {
     max-width: 50px;
     margin-right: 30px;
