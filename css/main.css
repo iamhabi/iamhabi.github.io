@@ -69,10 +69,10 @@ body { margin: 0 auto; }
     margin: auto;
 }
 
-.post_excerpt {
+/* .post_excerpt {
     max-width: 600px;
     margin: auto
-}
+} */
 
 p {
     font-size: 30px;
