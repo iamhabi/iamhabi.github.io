@@ -82,12 +82,23 @@ body { margin: 0 auto; }
 img { max-width: 600px; }
 video { max-width: 600px; }
 
-ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
-ul.posts li { list-style: none; }
+ul.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+}
+ul.posts li {
+    list-style: none;
+    margin-bottom: 10px;
+}
 
-ol { list-style: none; }
+ol {
+    list-style: none;
+}
 ol[start="2"] { counter-reset: counter 1; }
-ol li { counter-increment: counter; }
+ol li {
+    counter-increment: counter;
+    margin-bottom: 10px;
+}
 ol li::before {
   content: counter(counter) ".";
   font-size: 20px;
