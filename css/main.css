@@ -82,11 +82,9 @@ body { margin: 0 auto; }
 img { max-width: 600px; }
 video { max-width: 600px; }
 
-ul {
-    margin-bottom: 10px;
-}
 ul li {
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 ol {
