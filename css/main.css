@@ -84,7 +84,6 @@ video { max-width: 600px; }
 
 ul {
     margin: 20px auto 40px;
-    font-size: 1.5em;
 }
 ul li {
     list-style: none;
@@ -101,7 +100,6 @@ ol li {
 }
 ol li::before {
     content: counter(counter) ".";
-    font-size: 20px;
     padding-right: 5px;
 }
 
