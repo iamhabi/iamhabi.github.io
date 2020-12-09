@@ -153,6 +153,10 @@ ol li::before {
         margin-bottom: 1rem;
     }
 
+    .post_list {
+        margin-left: 3px; 
+    }
+
     .post_excerpt { display: none }
 
     .nav {
