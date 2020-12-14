@@ -9,8 +9,7 @@ body { margin: 0 auto; }
     overflow: hidden;
     margin: auto;
     text-decoration: none;
-    max-width: 1600px;
-    margin: auto; 
+    max-width: 1000px;
 }
 
 .topnav a {
