@@ -37,17 +37,9 @@ body { margin: 0 auto; }
     text-decoration: none;
 }
 
-/* .dot {
-    height: 25px;
-    width: 25px;
-    background-color: aqua;
-    border-radius: 50%;
-    display: inline-block;
-} */
-
 .title {
     text-decoration: none;
-    height: 30px;
+    height: 36px;
     display: block;
     color: black;
 }
