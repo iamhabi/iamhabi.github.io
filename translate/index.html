@@ -16,7 +16,7 @@ title: Translate
                 <p class="date">{{ post.date | date_to_string | {{ post.category }}</p>
             </div>
             <div class="post_excerpt">
-                <p>{{ post.excerpt }}</p>
+                {{ post.excerpt | strip_html | truncate: 100, '...' }}
             </div>
         </div>
         {% endif %}
