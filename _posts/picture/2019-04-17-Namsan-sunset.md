@@ -5,7 +5,7 @@ date: 2019-04-17
 category: picture
 ---
 
-남산 정상 쪽에서 찍은 일출 사진
+남산 정상 쪽에서 찍은 일몰 사진
 
 ![nam 1](/media/picture/20190417/20190417_190645 (2).jpg)
 ![nam 2](/media/picture/20190417/20190417_190623.jpg)
