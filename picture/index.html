@@ -1,0 +1,21 @@
+---
+layout: default
+title: Picture
+---
+
+<div class="post_list">
+    {% for post in site.posts %}
+        {% if post.category == "picture" %}
+        <div class="gallery">
+            <h2>
+                <a href="{{ post.url }}" title="{{ post.title }}" class="title">
+                    {{ post.title }}
+                </a>
+            </h2>
+            <div class="date">
+                <p class="date">{{ post.date | date_to_string | {{ post.category }}</p>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
