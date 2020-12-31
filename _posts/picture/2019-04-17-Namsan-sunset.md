@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Namsan Sunset
+title: 남산 일몰
 date: 2019-04-17
 category: picture
 ---
