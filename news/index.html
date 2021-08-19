@@ -3,4 +3,18 @@ layout: default
 title: news
 ---
 
-hello news
+<script>
+
+let URL = '221.138.182.150:8000/news';
+
+fetch(URL)
+    .then(function(response) {
+        let data = response.json();
+        return data;
+    })
+    .then(data => {
+        for (var i = 0; i < data.length; i++) {
+            document.write((i + 1) + " <a href = '" + data[i].url + "'>" + data[i].title + "</a><br>");
+        }
+    })
+</script>
