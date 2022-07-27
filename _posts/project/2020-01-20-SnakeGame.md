@@ -20,6 +20,3 @@ category: project
     <source src="/media/Snake/Snake_200213.mp4" type="video/mp4">
   </video>
 </figure>
-
-2020년 2월 13일에 영상을 찍었는데 **■** 부분이 바뀌어 있어서 좀 당황했다.  
-**■**이 부분이 마음에 안 들어서 조만간 다른 걸로 바꿀 예정이다.
