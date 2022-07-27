@@ -7,6 +7,8 @@ category: book
 
 스톡홀름에서 두 건의 연속 살인이 발생한다. 사건 수사를 지휘하는 건 바로 무능하기로 이름난 벡스트룀 경감! 그는 수사를 미뤄둔 채 술집에서 흥청망청하며 시간을 보내는데……. 직무 유기와 부정부패를 일삼던 이 최악의 형사가 과연 사건을 해결하고 스웨덴의 영웅으로 떠오를 수 있을까? - 교보문고 책 소개
 
+<!--break-->
+
 [용을 죽인 형사 - 교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788954651462&orderClick=LAG&Kc=)
 
 ## 용을 죽인 형사 - 레이프 페르손

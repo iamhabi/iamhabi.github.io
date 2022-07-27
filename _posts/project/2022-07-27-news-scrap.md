@@ -7,6 +7,8 @@ category: project
 
 Rust를 활용하여 만든 기사 스크랩 프로그램  
 
+<!--break-->
+
 <https://github.com/iamhabi/news-scrap>
 
 스크랩한 뉴스를 저장하기 위해 MySQL을 사용  
