@@ -7,7 +7,6 @@ category: project
 
 Rust를 활용하여 만든 기사 스크랩 프로그램  
 
-<!--break-->
 
 <https://github.com/iamhabi/news-scrap>
 
