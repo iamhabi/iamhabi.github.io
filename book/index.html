@@ -16,7 +16,7 @@ title: Book
                 <p class="date">{{ post.date | date_to_string | {{ post.category }}</p>
             </div>
             <div class="post_excerpt">
-                {{ post.excerpt | strip_html | split:'<!--break-->' | first }}
+                {{ post.excerpt | split:'<!--break-->' | first }}
             </div>
         </div>
         {% endif %}

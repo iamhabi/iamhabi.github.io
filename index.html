@@ -18,7 +18,7 @@ title: iamhabi
             </div>
 
             <div class="post_excerpt">
-                {{ post.excerpt | strip_html | split:'<!--break-->' | first }}
+                {{ post.excerpt | split:'<!--break-->' | first }}
             </div>
         </div>
         {% endif %}
