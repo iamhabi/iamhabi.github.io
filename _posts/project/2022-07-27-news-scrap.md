@@ -25,7 +25,7 @@ Rust를 활용하여 만든 기사 스크랩 프로그램
 ### read.json
 스크랩할 뉴스 사이트를 저장하는 json 파일
 
-```
+```json
 {
     "url": "https://news.exampleurl.com/",
     "tag": "a",
@@ -41,7 +41,7 @@ attr: 태그를 특정하기 위한 속성(attributes) 입력
 database에 접근하기 위한 정보 저장
 
 /src/sql/db.rs
-```
+```rust
 pub const DB_USER:&'static str = "username";
 pub const DB_PASSWORD:&'static str = "password";
 pub const DB_IP:&'static str = "localhost";
