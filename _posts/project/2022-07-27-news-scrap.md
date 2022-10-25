@@ -5,13 +5,13 @@ date: 2022-07-27
 category: project
 ---
 
-Rust를 활용하여 만든 기사 스크랩 프로그램  
+Rust를 활용하여 만든 기사 스크랩 프로그램
 
 <!--break-->
 
 <https://github.com/iamhabi/news-scrap>
 
-스크랩한 뉴스를 저장하기 위해 MySQL을 사용  
+스크랩한 뉴스를 저장하기 위해 MySQL을 사용
 
 ### MySQL
 
@@ -22,24 +22,23 @@ Rust를 활용하여 만든 기사 스크랩 프로그램
     - href: TEXT NOT NULL
     - created: DATE DEFAULT CURRENT_DATE
 
-
 ### read.json
-스크랩할 뉴스 사이트를 저장하는 json 파일  
+스크랩할 뉴스 사이트를 저장하는 json 파일
 
 ```
-{  
-    "url": "https://news.exampleurl.com/",  
-    "tag": "a",  
-    "attr": ["class", "titlelink"]  
-},
+{
+    "url": "https://news.exampleurl.com/",
+    "tag": "a",
+    "attr": ["class", "titlelink"]
+}
 ```
 
-url: 스크랩을 원하는 사이트의 url 입력  
-tag: 해당 사이트의 기사 제목의 태그를 입력  
+url: 스크랩을 원하는 사이트의 url 입력
+tag: 해당 사이트의 기사 제목의 태그를 입력
 attr: 태그를 특정하기 위한 속성(attributes) 입력
 
 ---
-database에 접근하기 위한 정보 저장  
+database에 접근하기 위한 정보 저장
 
 /src/sql/db.rs
 ```
