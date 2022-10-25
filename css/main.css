@@ -14,7 +14,8 @@ body {
     max-width: 1000px;
 }
 
-.topnav a {
+.topnav a,
+.topnav button {
     float: left;
     display: block;
     text-align: center;
@@ -101,13 +102,19 @@ ol li::before {
 }
 
 @media only screen and (max-width: 800px) {
-    .topnav a:not(:first-child) {
+    .topnav .nav {
         display: none;
     }
 
-    .topnav a.icon {
+    .topnav .icon {
         float: right;
         display: block;
+    }
+
+    .topnav button {
+        border: none;
+        background: none;
+        cursor: pointer;
     }
 
     .topnav.responsive {
