@@ -1,4 +1,6 @@
-body { margin: 0 auto; }
+body {
+    margin: 0 auto;
+}
 
 .gallery {
     width: 1000px;
@@ -12,7 +14,8 @@ body { margin: 0 auto; }
     max-width: 1000px;
 }
 
-.topnav a {
+.topnav a,
+.topnav button {
     float: left;
     display: block;
     text-align: center;
@@ -45,7 +48,7 @@ body { margin: 0 auto; }
 }
 
 .date {
-    margin-top:1rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 20px;
 }
@@ -56,14 +59,14 @@ body { margin: 0 auto; }
     margin-bottom: 1rem;
 }
 
-.post { 
+.post {
     max-width: 600px;
     margin: auto;
 }
 
 .post_list {
     max-width: 1000px;
-    margin: auto
+    margin: auto;
 }
 
 .contact {
@@ -71,8 +74,12 @@ body { margin: 0 auto; }
     margin-right: 30px;
 }
 
-img { max-width: 600px; }
-video { max-width: 600px; }
+img {
+    max-width: 600px;
+}
+video {
+    max-width: 600px;
+}
 
 ul li {
     margin-top: 5px;
@@ -82,7 +89,9 @@ ul li {
 ol {
     list-style: none;
 }
-ol[start="2"] { counter-reset: counter 1; }
+ol[start="2"] {
+    counter-reset: counter 1;
+}
 ol li {
     counter-increment: counter;
     margin-bottom: 10px;
@@ -93,16 +102,22 @@ ol li::before {
 }
 
 @media only screen and (max-width: 800px) {
-    .topnav a:not(:first-child) {
+    .topnav .nav {
         display: none;
     }
 
-    .topnav a.icon {
+    .topnav .icon {
         float: right;
         display: block;
     }
 
-    .topnav.responsive { 
+    .topnav button {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .topnav.responsive {
         position: relative;
         float: none;
         position: relative;
@@ -134,7 +149,7 @@ ol li::before {
         color: black;
     }
 
-    .post { 
+    .post {
         max-width: 97%;
         margin: auto;
     }
@@ -146,10 +161,12 @@ ol li::before {
     }
 
     .post_list {
-        margin-left: 3px; 
+        margin-left: 3px;
     }
 
-    .post_excerpt { display: none }
+    .post_excerpt {
+        display: none;
+    }
 
     .nav {
         margin-top: 4px;
@@ -162,28 +179,34 @@ ol li::before {
         margin-top: 20px;
     }
 
-    img { 
+    img {
         max-width: 95%;
         display: block;
         margin: 0px auto;
     }
 
-    video { max-width: 95%; }
+    video {
+        max-width: 95%;
+    }
 
-    ol, ol li {
+    ol,
+    ol li {
         margin-left: 0;
         padding-left: 0;
     }
 
-    h1, .h1 {
+    h1,
+    .h1 {
         font-size: 2rem;
     }
 
-    h2, .h2 {
+    h2,
+    .h2 {
         font-size: 1.5rem;
     }
 
-    h3, .h3 {
+    h3,
+    .h3 {
         font-size: 1rem;
     }
 }

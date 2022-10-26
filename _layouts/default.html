@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<html lang="ko">
     <head>
+        <meta charset="utf-8">
         <title>{{ page.title }}</title>
         <link rel="stylesheet" type="text/css" href="/css/main.css">
-        <link rel="stylesheet" href="/css/bootstrap.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" sizes="57x57" href="{{site.baseurl}}/media/favicon/apple-icon-57x57.png">
@@ -14,7 +15,7 @@
         <link rel="apple-touch-icon" sizes="144x144" href="{{site.baseurl}}/media/favicon/apple-icon-144x144.png">
         <link rel="apple-touch-icon" sizes="152x152" href="{{site.baseurl}}/media/favicon/apple-icon-152x152.png">
         <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/media/favicon/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="{{site.baseurl}}/media/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="{{site.baseurl}}/media/favicon/android-icon-192x192.png">
         <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/media/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="{{site.baseurl}}/media/favicon/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/media/favicon/favicon-16x16.png">
@@ -24,14 +25,22 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-   
+
         <div class="topnav" id="myTopnav">
             <a href="/" class="home">HABI</a>
             <a href="/project/" class="nav">Project</a>
             <a href="/dev" class="nav">Dev</a>
             <a href="/picture" class="nav">Picture</a>
             <a href="/about" class="nav">About</a>
-            <a href="javascript:void(0);" style="font-size:15px; color:black" class="icon" onclick="responsiveNav()">&#9776;</a>
+            <button type="button" class="icon" onclick="responsiveNav()" aria-labelledby="menu-button-label" style="font-size:15px; color:black">
+                <span id="menu-button-label" hidden>메뉴 열기</span>
+                <svg width="24" height="24" fill="#000" viewBox="0 0 256 256" aria-hidden="true">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <line x1="40" y1="128" x2="216" y2="128" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <line x1="40" y1="64" x2="216" y2="64" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <line x1="40" y1="192" x2="216" y2="192" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                </svg>
+            </button>
         </div>
 
         <div>
@@ -40,17 +49,16 @@
 
         <hr>
         <p style="text-align: center; color: #c8c8c8;">Copyright &copy; iamhabi 2020</p>
-        
+
         <script>
             function responsiveNav() {
-              var x = document.getElementById("myTopnav");
-              if (x.className === "topnav") {
-                x.className += " responsive";
-              } else {
-                x.className = "topnav";
-              }
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
             }
         </script>
-
     </body>
 </html>
