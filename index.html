@@ -6,21 +6,21 @@ title: iamhabi
 <div class="post_list">
     {% for post in site.posts %}
         {% if post.category != "introduction" %}
-        <div class="gallery">
-            <h2>
-                <a href="{{ post.url }}" title="{{ post.title }}" class="title">
-                    {{ post.title }}
-                </a>
-            </h2>
+            <div class="gallery">
+                <h2>
+                    <a href="{{ post.url }}" title="{{ post.title }}" class="title">
+                        {{ post.title }}
+                    </a>
+                </h2>
 
-            <div class="date">
-                <p class="date">{{ post.date | date_to_string }} | {{ post.category }}</p>
-            </div>
+                <div class="date">
+                    <p class="date">{{ post.date | date_to_string }} | {{ post.category }}</p>
+                </div>
 
-            <div class="post_excerpt">
-                {{ post.excerpt | split:'<!--break-->' | first }}
+                <div class="post_excerpt">
+                    {{ post.excerpt | split:'<!--break-->' | first }}
+                </div>
             </div>
-        </div>
         {% endif %}
     {% endfor %}
 </div>
